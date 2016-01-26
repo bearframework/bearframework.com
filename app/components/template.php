@@ -166,7 +166,7 @@
             </div>
             Available under the <a href="http://opensource.org/licenses/MIT">MIT license</a><br/>
             Created and maintained by <a href="http://ivopetkov.com">Ivo Petkov</a><br/>
-            This website is <a href="http://github/">built with Bear Framework</a>
+            This website is <a href="https://github.com/bearframework/bearframework.com">built with Bear Framework</a>
         </footer>
     </body>
 </html>
