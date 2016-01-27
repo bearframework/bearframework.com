@@ -25,10 +25,12 @@ $data = include $context->dir . 'data/api/' . $component->apiCode . '.php';
             } else {
                 echo $data['class'] . '::' . $data['name'];
             }
-            if (!empty($data['comment']['description'])) {
-                echo '<p>' . $data['comment']['description'] . '</p>';
-            }
             ?></h1>
+        <?php
+        if (!empty($data['comment']['description'])) {
+            echo '<p>' . $data['comment']['description'] . '</p>';
+        }
+        ?>
         <?php
         $getValue = function($value) {
             if (is_string($value)) {

@@ -4,7 +4,7 @@ return array (
   'namespace' => 'App\\Components',
   'comment' => 
   array (
-    'description' => 'Proccess HTML code and transforms component tags',
+    'description' => 'Process HTML code and transforms component tags',
     'type' => NULL,
     'parameters' => 
     array (

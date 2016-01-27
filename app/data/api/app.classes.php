@@ -4,7 +4,7 @@ return array (
   'namespace' => 'App',
   'comment' => 
   array (
-    'description' => 'Provides functionaly for autoloading classes',
+    'description' => 'Provides functionality for autoloading classes',
     'type' => NULL,
     'parameters' => 
     array (

@@ -1,10 +1,10 @@
 <html>
     <body>
         <p>
-            Bear Framework provides you with a file-based object storage. It's called <a href = "https://github.com/bearframework/bearframework/releases">Object storage</a> and is integrated into the framework for easy access. Object/files are accessed by key (internally it's a filename).<br/><br/>
+            Bear Framework provides you with a file-based object storage. It's called <a href="https://github.com/ivopetkov/object-storage">Object Storage</a> and is integrated into the framework for easy access. Object/files are accessed by key (internally it's a filename).<br/><br/>
             One of the great benefits of this library is that it support atomic operations (files locking is used). <br/><br/>
-            Additionally you can set metadata to each object. It's a great way to store size, dates or other file metadata.<br/><br/>
-            And of course the data can be backed up easily. It is just raw files on your hard drive.<br/><br/>
+            Additionally, you can set metadata to each object. It's a great way to store size, dates or other file metadata.<br/><br/>
+            And of course, the data can be backed up easily. It is just raw files on your hard drive.<br/><br/>
             You can mark an object as public and get it's public URL by calling <a href="<?= $app->getUrl('/documentation/api/app.data.getUrl/') ?>">$app->data->getUrl</a>
         </p>
         <h2>API</h2>

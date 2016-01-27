@@ -1,8 +1,8 @@
 <html>
     <body>
         <p>
-            Logs are very important part for an application, and they come natively in Bear Framework. You can config automatic error logging and log custom data yourself.<br/><br/>
-            To enable logs just set the 'logsDir' configuration variable to a desired dir where the files will be written.
+            Logs are a very important part of an application, and they come natively in Bear Framework. You can configure automatic error logging and log custom data yourself.<br/><br/>
+            To enable logs just set the 'logsDir' configuration variable to the desired directory where the files will be written.
         </p>
     <component src="code"><?= "
 \$app = new App([
@@ -27,6 +27,5 @@
     'logErrors' => true
 ]);
 " ?></component>
-</p>
 </body>
 </html>

@@ -49,9 +49,10 @@ $app->routes->add('/assets/icon*', function() use ($app, $context) {
         if ($size >= 16 && $size <= 1000) {
             $url = $context->assets->getUrl('assets/logo' . ($size < 60 ? '-small' : '') . '.png', ['width' => $size, 'height' => $size]);
             $path = str_replace($app->request->base, '', $url);
-            $reponse = new App\Response\FileReader($app->assets->getFilename($path));
-            $reponse->setContentType('image/png');
-            return $reponse;
+            $response = new App\Response\FileReader($app->assets->getFilename($path));
+            $response->setContentType('image/png');
+            $response->setMaxAge(86400);
+            return $response;
         }
     }
     return new App\Response\NotFound();
@@ -59,9 +60,10 @@ $app->routes->add('/assets/icon*', function() use ($app, $context) {
 
 // Route for the image used by the social networks
 $app->routes->add('/assets/socialimage', function() use ($context) {
-    $reponse = new App\Response\FileReader($context->dir . 'assets/social-image.png');
-    $reponse->setContentType('image/png');
-    return $reponse;
+    $response = new App\Response\FileReader($context->dir . 'assets/social-image.png');
+    $response->setContentType('image/png');
+    $response->setMaxAge(86400);
+    return $response;
 });
 
 // Update the response
@@ -81,7 +83,7 @@ $app->hooks->add('responseCreated', function($response) use ($app, $context) {
         $templateContent = str_replace('{pageContent}', $response->content, $templateContent);
         $response->content = $templateContent;
         if ($app->config->environment === 'production') {
-            $response->setMaxAge(60);
+            $response->setMaxAge(600);
         }
     }
 });

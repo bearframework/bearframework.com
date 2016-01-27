@@ -6,22 +6,22 @@
                 font-size: 3rem;
                 color: #26ade4;
                 text-align: center;
-                line-height: 110%;
-                padding: 0 1.5rem;
+                line-height: 130%;
+                padding: 0.5rem 1.5rem 0 1.5rem;
             }
             .subSlogan{
                 text-align: center;
                 font-size: 1.1rem;
-                padding: 1rem 1.5rem 4rem 1.5rem;
+                padding: 1rem 1.5rem 2.5rem 1.5rem;
             }
         </style>
     </head>
     <body>
-        <div class="slogan">A true 2016 framework</div>
+        <div class="slogan">A framework born in 2016</div>
         <div class="subSlogan">The tools you need to develop web apps in PHP faster</div>    
         <p>
-            The goal of Bear Framework is to help you start your next web project in less than a minute and help you make it successful. You've got <a href="<?= $app->getUrl('documentation/') ?>">routing</a>, <a href="<?= $app->getUrl('documentation/') ?>">data storage</a>, <a href="<?= $app->getUrl('documentation/') ?>">addons</a>, <a href="<?= $app->getUrl('documentation/') ?>">logging</a>, <a href="<?= $app->getUrl('documentation/') ?>">assets helpers</a>, <a href="<?= $app->getUrl('documentation/') ?>">HTML Server Components</a> and many more useful tools.<br/><br/>
-            But's first, let's see how easy to use and familial Bear Framework is. Here is a "Hi".
+            The goal of Bear Framework is to help you start your next web project in less than a minute and help you make it successful. You've got <a href="<?= $app->getUrl('/documentation/routing/') ?>">routing</a>, <a href="<?= $app->getUrl('/documentation/data/') ?>">data storage</a>, <a href="<?= $app->getUrl('/documentation/addons/') ?>">addons</a>, <a href="<?= $app->getUrl('/documentation/logging/') ?>">logging</a>, <a href="<?= $app->getUrl('/documentation/assets/') ?>">assets helpers</a> and <a href="<?= $app->getUrl('/documentation/') ?>">many more useful tools</a>.<br/><br/>
+            Let's start with "Hi" and see how easy to use Bear Framework is.
         </p>
 
     <component src="code"><?= "

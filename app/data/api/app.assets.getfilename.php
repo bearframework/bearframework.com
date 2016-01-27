@@ -13,7 +13,7 @@ return array (
   ),
   'comment' => 
   array (
-    'description' => 'Returns the local filename for a given url path',
+    'description' => 'Returns the local filename for a given URL path',
     'type' => NULL,
     'parameters' => 
     array (
@@ -32,6 +32,7 @@ return array (
     'exceptions' => 
     array (
       0 => '\\Exception',
+      1 => '\\InvalidArgumentException',
     ),
   ),
   'isPrivate' => false,

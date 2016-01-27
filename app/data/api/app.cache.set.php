@@ -19,7 +19,7 @@ return array (
     ),
     2 => 
     array (
-      'name' => 'time',
+      'name' => 'ttl',
       'value' => 0,
       'type' => 'int',
       'isOptional' => true,
@@ -45,9 +45,9 @@ return array (
       ),
       2 => 
       array (
-        'name' => 'time',
+        'name' => 'ttl',
         'type' => 'int',
-        'description' => 'Expiration time of the data in seconds relative to the current time. Zero mean no expiration.',
+        'description' => 'Time in seconds to stay in the cache. Zero mean no expiration.',
       ),
     ),
     'return' => 

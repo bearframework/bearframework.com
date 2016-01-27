@@ -70,7 +70,7 @@ return array (
       'type' => '\\App\\Context\\Classes',
       'comment' => 
       array (
-        'description' => 'Provides functionaly for autoloading classes in the current context',
+        'description' => 'Provides functionality for autoloading classes in the current context',
         'type' => '\\App\\Context\\Classes',
         'parameters' => 
         array (

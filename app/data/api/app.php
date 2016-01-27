@@ -19,7 +19,7 @@ return array (
     0 => 
     array (
       'name' => 'VERSION',
-      'value' => '0.5.0',
+      'value' => '0.6.0',
       'type' => 'string',
     ),
   ),
@@ -164,7 +164,7 @@ return array (
       'type' => 'App\\Hooks',
       'comment' => 
       array (
-        'description' => 'Provides functionaly for notifications and data requests',
+        'description' => 'Provides functionality for notifications and data requests',
         'type' => 'App\\Hooks',
         'parameters' => 
         array (
@@ -254,7 +254,7 @@ return array (
       'type' => 'App\\Classes',
       'comment' => 
       array (
-        'description' => 'Provides functionaly for autoloading classes',
+        'description' => 'Provides functionality for autoloading classes',
         'type' => 'App\\Classes',
         'parameters' => 
         array (
@@ -480,7 +480,7 @@ return array (
           array (
             'name' => 'response',
             'type' => 'App\\Response',
-            'description' => 'The reponse object to output',
+            'description' => 'The response object to output',
           ),
         ),
         'return' => 

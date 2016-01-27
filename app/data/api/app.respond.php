@@ -21,7 +21,7 @@ return array (
       array (
         'name' => 'response',
         'type' => 'App\\Response',
-        'description' => 'The reponse object to output',
+        'description' => 'The response object to output',
       ),
     ),
     'return' => 

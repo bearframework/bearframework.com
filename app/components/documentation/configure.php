@@ -40,7 +40,7 @@ require 'vendor/autoload.php';
     return new App\Response('Hi');
 });" ?></component>
     <p>
-        <a href = "https://github.com/bearframework/bearframework/releases">Download</a> the following code and begin building your app right away.
+        <a href="https://github.com/bearframework/bearframework/releases">Download</a> the following code (look for file named "sample-app.zip") and begin building your app right away.
     </p>
 </body>
 </html>

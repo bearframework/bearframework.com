@@ -179,7 +179,7 @@ return array (
       ),
       'comment' => 
       array (
-        'description' => 'Appends data to the object specified. If the object does not exist it will be created.',
+        'description' => 'Appends data to the object specified. If the object does not exist, it will be created.',
         'type' => NULL,
         'parameters' => 
         array (
@@ -444,7 +444,7 @@ return array (
       ),
       'comment' => 
       array (
-        'description' => 'Marks object as private so it cannot be accessed as an asset',
+        'description' => 'Marks object as private, so it cannot be accessed as an asset',
         'type' => NULL,
         'parameters' => 
         array (

@@ -7,23 +7,35 @@ return array (
     array (
       'name' => 'name',
       'value' => NULL,
-      'type' => NULL,
+      'type' => 'string',
       'isOptional' => false,
     ),
     1 => 
     array (
       'name' => 'value',
       'value' => NULL,
-      'type' => NULL,
+      'type' => 'mixed',
       'isOptional' => false,
     ),
   ),
   'comment' => 
   array (
-    'description' => '',
+    'description' => 'Magic method',
     'type' => NULL,
     'parameters' => 
     array (
+      0 => 
+      array (
+        'name' => 'name',
+        'type' => 'string',
+        'description' => NULL,
+      ),
+      1 => 
+      array (
+        'name' => 'value',
+        'type' => 'mixed',
+        'description' => NULL,
+      ),
     ),
     'return' => NULL,
     'exceptions' => 

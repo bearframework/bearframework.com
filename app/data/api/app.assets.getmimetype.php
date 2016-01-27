@@ -13,7 +13,7 @@ return array (
   ),
   'comment' => 
   array (
-    'description' => 'Finds the mimetype of a filename by checking it\'s extension',
+    'description' => 'Finds the mime type of a filename by checking it\'s extension',
     'type' => NULL,
     'parameters' => 
     array (
@@ -31,6 +31,7 @@ return array (
     ),
     'exceptions' => 
     array (
+      0 => '\\InvalidArgumentException',
     ),
   ),
   'isPrivate' => false,

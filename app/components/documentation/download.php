@@ -15,8 +15,11 @@
 require 'vendor/autoload.php';" ?></component>
     <h2>Download the zip file</h2>
     <p>
-        Download the <a href = "https://github.com/bearframework/bearframework/releases">latest release</a> from our GitHub page. The zip includes a ready to use version that contains all dependencies. Then add the following code to your project.
+        Download the <a href="https://github.com/bearframework/bearframework/releases">latest release</a> from our GitHub page. The zip includes a ready to use version that contains all dependencies. Then add the following code to your project.
     </p>
     <component src="code">require '/path/to/bearframework/autoload.php';</component>
+    <p>
+        You can also <a href="https://github.com/bearframework/bearframework/releases">download</a> a sample app and begin building your app right away.
+    </p>
 </body>
 </html>

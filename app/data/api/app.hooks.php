@@ -4,7 +4,7 @@ return array (
   'namespace' => 'App',
   'comment' => 
   array (
-    'description' => 'Provides functionaly for notifications and data requests',
+    'description' => 'Provides functionality for notifications and data requests',
     'type' => NULL,
     'parameters' => 
     array (
@@ -92,6 +92,7 @@ return array (
         ),
         'exceptions' => 
         array (
+          0 => '\\InvalidArgumentException',
         ),
       ),
       'isPrivate' => false,
@@ -136,6 +137,7 @@ return array (
         ),
         'exceptions' => 
         array (
+          0 => '\\InvalidArgumentException',
         ),
       ),
       'isPrivate' => false,

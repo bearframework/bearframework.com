@@ -1,7 +1,7 @@
 <html>
     <body>
         <p>
-            Currently this feature is based on the <a href="<?= $app->getUrl('/documentation/data/') ?>">data</a> feature. It has simple API and enables you to cache data for later use.
+            Currently, this feature is based on the <a href="<?= $app->getUrl('/documentation/data/') ?>">data</a> feature. It has simple API and enables you to cache data for later use.
         </p>
         <h2>API</h2>
     <component src="apiList" prefix="App\Cache"/>

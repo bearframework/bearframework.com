@@ -1,7 +1,7 @@
 <html>
     <body>
         <p>
-            Bear framework is really simple to start and simple to use. But still there are some configuration variables that must be set so that the application works the ways you expect. There are some predefined options and you can easily add specific ones for your app.<br/><br/>
+            Bear framework is really simple to start and simple to use. But still there are some configuration variables that must be set so that the application works the ways you expect. There are some predefined options, and you can easily add specific ones for your app.<br/><br/>
             Here is a recommended configuration:
         </p>
     <component src="code"><?= "

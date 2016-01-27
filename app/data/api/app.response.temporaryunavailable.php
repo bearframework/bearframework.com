@@ -50,7 +50,7 @@ return array (
       'type' => 'array',
       'comment' => 
       array (
-        'description' => 'The headers of the reponse',
+        'description' => 'The headers of the response',
         'type' => 'array',
         'parameters' => 
         array (

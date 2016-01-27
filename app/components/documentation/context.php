@@ -1,7 +1,7 @@
 <html>
     <body>
         <p>
-            When you write your application code or develop addons, you often need to know the exact location of your code (to load other files of example). Bear Framework provides you with an object called $context that is global to your scope.
+            When you write your application code or develop addons, you often need to know the exact location of your code (to load other files for example). Bear Framework provides you with an object called $context that is available in your scope.
         </p>
         <h2>API (for applications)</h2>
         <component src="apiList" prefix="App\AppContext"/>
@@ -32,6 +32,5 @@
     <component src="code"><?= "
 \$options = \$context-&gt;getOptions();
 " ?></component>
-</p>
 </body>
 </html>

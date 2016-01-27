@@ -13,7 +13,7 @@ return array (
   ),
   'comment' => 
   array (
-    'description' => 'Marks object as private so it cannot be accessed as an asset',
+    'description' => 'Marks object as private, so it cannot be accessed as an asset',
     'type' => NULL,
     'parameters' => 
     array (

@@ -149,7 +149,7 @@ return array (
         'return' => 
         array (
           'type' => 'mixed',
-          'description' => 'The result of th matching callback. NULL if none.',
+          'description' => 'The result of the matching callback. NULL if none.',
         ),
         'exceptions' => 
         array (

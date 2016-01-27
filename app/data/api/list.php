@@ -76,13 +76,13 @@ return array (
   array (
     'name' => 'App\\Assets::getFilename',
     'type' => 'method',
-    'description' => 'Returns the local filename for a given url path',
+    'description' => 'Returns the local filename for a given URL path',
   ),
   'app.assets.getmimetype' => 
   array (
     'name' => 'App\\Assets::getMimeType',
     'type' => 'method',
-    'description' => 'Finds the mimetype of a filename by checking it\'s extension',
+    'description' => 'Finds the mime type of a filename by checking it\'s extension',
   ),
   'app.assets.geturl' => 
   array (
@@ -124,7 +124,7 @@ return array (
   array (
     'name' => 'App\\Classes',
     'type' => 'class',
-    'description' => 'Provides functionaly for autoloading classes',
+    'description' => 'Provides functionality for autoloading classes',
   ),
   'app.classes.add' => 
   array (
@@ -154,7 +154,7 @@ return array (
   array (
     'name' => 'App\\Components\\Compiler',
     'type' => 'class',
-    'description' => 'Proccess HTML code and transforms component tags',
+    'description' => 'Process HTML code and transforms component tags',
   ),
   'app.components.compiler.addalias' => 
   array (
@@ -292,7 +292,7 @@ return array (
   array (
     'name' => 'App\\Context\\Classes',
     'type' => 'class',
-    'description' => 'Provides functionaly for autoloading classes in the current context',
+    'description' => 'Provides functionality for autoloading classes in the current context',
   ),
   'app.context.classes.add' => 
   array (
@@ -328,7 +328,7 @@ return array (
   array (
     'name' => 'App\\Data::append',
     'type' => 'method',
-    'description' => 'Appends data to the object specified. If the object does not exist it will be created.',
+    'description' => 'Appends data to the object specified. If the object does not exist, it will be created.',
   ),
   'app.data.delete' => 
   array (
@@ -364,7 +364,7 @@ return array (
   array (
     'name' => 'App\\Data::makePrivate',
     'type' => 'method',
-    'description' => 'Marks object as private so it cannot be accessed as an asset',
+    'description' => 'Marks object as private, so it cannot be accessed as an asset',
   ),
   'app.data.makepublic' => 
   array (
@@ -400,7 +400,7 @@ return array (
   array (
     'name' => 'App\\Hooks',
     'type' => 'class',
-    'description' => 'Provides functionaly for notifications and data requests',
+    'description' => 'Provides functionality for notifications and data requests',
   ),
   'app.hooks.add' => 
   array (
@@ -448,13 +448,13 @@ return array (
   array (
     'name' => 'App\\Request::__get',
     'type' => 'method',
-    'description' => '',
+    'description' => 'Magic method',
   ),
   'app.request.isset' => 
   array (
     'name' => 'App\\Request::__isset',
     'type' => 'method',
-    'description' => '',
+    'description' => 'Magic method',
   ),
   'app.request.path' => 
   array (
@@ -544,7 +544,7 @@ return array (
   array (
     'name' => 'App\\Request::__set',
     'type' => 'method',
-    'description' => '',
+    'description' => 'Magic method',
   ),
   'app.request.tostring' => 
   array (

@@ -31,6 +31,7 @@ return array (
     ),
     'exceptions' => 
     array (
+      0 => '\\InvalidArgumentException',
     ),
   ),
   'isPrivate' => false,

@@ -97,6 +97,8 @@
                 font-weight:normal;
                 color: #26ade4;
                 text-align:center;
+                padding: 0 1.5rem;
+                word-break:break-all;
             }
             h2{
                 font-size:1.7rem;
