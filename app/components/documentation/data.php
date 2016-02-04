@@ -15,7 +15,7 @@
 \$app-&gt;data-&gt;set([
     'key' =&gt; 'users/1',
     'body' =&gt; '{&quot;name&quot;:&quot;John Smith&quot;,&quot;email&quot;:&quot;john@example.com&quot;}',
-    'metadata.lastAccessTime' =&gt; (string) time()
+    'metadata.lastAccessTime' =&gt; '1234567890'
 ]);
 " ?></component>
     <p>Getting data</p>
