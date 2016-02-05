@@ -1,24 +1,19 @@
 <?php
 return array (
-  'name' => 'getOptions',
+  'name' => 'getFile',
   'parameters' => 
   array (
   ),
   'comment' => 
   array (
-    'description' => 'Returns the options set for the current addon',
+    'description' => '',
     'type' => NULL,
     'parameters' => 
     array (
     ),
-    'return' => 
-    array (
-      'type' => 'array',
-      'description' => 'The options set for the current addon',
-    ),
+    'return' => NULL,
     'exceptions' => 
     array (
-      0 => '\\App\\InvalidConfigOptionException',
     ),
   ),
   'isPrivate' => false,
@@ -26,9 +21,9 @@ return array (
   'isPublic' => true,
   'isStatic' => false,
   'isAbstract' => false,
-  'isFinal' => false,
+  'isFinal' => true,
   'isConstructor' => false,
   'isDestructor' => false,
   'type' => 'method',
-  'class' => 'App\\AddonContext',
+  'class' => 'App\\InvalidConfigOptionException',
 );

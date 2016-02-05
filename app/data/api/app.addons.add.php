@@ -47,6 +47,7 @@ return array (
     'exceptions' => 
     array (
       0 => '\\InvalidArgumentException',
+      1 => '\\App\\InvalidConfigOptionException',
     ),
   ),
   'isPrivate' => false,

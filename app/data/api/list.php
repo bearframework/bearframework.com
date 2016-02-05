@@ -16,7 +16,7 @@ return array (
   array (
     'name' => 'App\\AddonContext::__construct',
     'type' => 'method',
-    'description' => 'The constructor',
+    'description' => 'The constructor',
   ),
   'app.addoncontext.getoptions' => 
   array (
@@ -58,7 +58,7 @@ return array (
   array (
     'name' => 'App\\AppContext::__construct',
     'type' => 'method',
-    'description' => 'The constructor',
+    'description' => 'The constructor',
   ),
   'app.appcontext.load' => 
   array (
@@ -138,6 +138,12 @@ return array (
     'type' => 'method',
     'description' => 'Loads a class if registered',
   ),
+  'app.clone' => 
+  array (
+    'name' => 'App::__clone',
+    'type' => 'method',
+    'description' => 'Prevents multiple app instances',
+  ),
   'app.components' => 
   array (
     'name' => 'App\\Components',
@@ -168,17 +174,17 @@ return array (
     'type' => 'method',
     'description' => 'Constructs a Component object',
   ),
-  'app.components.compiler.handleinvalidtagwarning' => 
+  'app.components.compiler.getcomponentfilecontent' => 
   array (
-    'name' => 'App\\Components\\Compiler::handleInvalidTagWarning',
-    'type' => 'method',
-    'description' => '',
-  ),
-  'app.components.compiler.includecomponentfile' => 
-  array (
-    'name' => 'App\\Components\\Compiler::includeComponentFile',
+    'name' => 'App\\Components\\Compiler::getComponentFileContent',
     'type' => 'method',
     'description' => 'Includes the component file providing context information',
+  ),
+  'app.components.compiler.handleinvalidhtmlerrors' => 
+  array (
+    'name' => 'App\\Components\\Compiler::handleInvalidHTMLErrors',
+    'type' => 'method',
+    'description' => '',
   ),
   'app.components.compiler.process' => 
   array (
@@ -203,6 +209,12 @@ return array (
     'name' => 'App\\Components\\Component',
     'type' => 'class',
     'description' => 'HTML Server Components object',
+  ),
+  'app.components.component.construct' => 
+  array (
+    'name' => 'App\\Components\\Component::__construct',
+    'type' => 'method',
+    'description' => 'The constructor',
   ),
   'app.components.component.get' => 
   array (
@@ -413,6 +425,66 @@ return array (
     'name' => 'App\\Hooks::execute',
     'type' => 'method',
     'description' => 'Triggers execution of all callbacks hooked to the name specified',
+  ),
+  'app.invalidconfigoptionexception' => 
+  array (
+    'name' => 'App\\InvalidConfigOptionException',
+    'type' => 'class',
+    'description' => 'Construct the exception',
+  ),
+  'app.invalidconfigoptionexception.construct' => 
+  array (
+    'name' => 'App\\InvalidConfigOptionException::__construct',
+    'type' => 'method',
+    'description' => '',
+  ),
+  'app.invalidconfigoptionexception.getcode' => 
+  array (
+    'name' => 'App\\InvalidConfigOptionException::getCode',
+    'type' => 'method',
+    'description' => '',
+  ),
+  'app.invalidconfigoptionexception.getfile' => 
+  array (
+    'name' => 'App\\InvalidConfigOptionException::getFile',
+    'type' => 'method',
+    'description' => '',
+  ),
+  'app.invalidconfigoptionexception.getline' => 
+  array (
+    'name' => 'App\\InvalidConfigOptionException::getLine',
+    'type' => 'method',
+    'description' => '',
+  ),
+  'app.invalidconfigoptionexception.getmessage' => 
+  array (
+    'name' => 'App\\InvalidConfigOptionException::getMessage',
+    'type' => 'method',
+    'description' => '',
+  ),
+  'app.invalidconfigoptionexception.getprevious' => 
+  array (
+    'name' => 'App\\InvalidConfigOptionException::getPrevious',
+    'type' => 'method',
+    'description' => '',
+  ),
+  'app.invalidconfigoptionexception.gettrace' => 
+  array (
+    'name' => 'App\\InvalidConfigOptionException::getTrace',
+    'type' => 'method',
+    'description' => '',
+  ),
+  'app.invalidconfigoptionexception.gettraceasstring' => 
+  array (
+    'name' => 'App\\InvalidConfigOptionException::getTraceAsString',
+    'type' => 'method',
+    'description' => '',
+  ),
+  'app.invalidconfigoptionexception.tostring' => 
+  array (
+    'name' => 'App\\InvalidConfigOptionException::__toString',
+    'type' => 'method',
+    'description' => '',
   ),
   'app.load' => 
   array (
@@ -893,5 +965,11 @@ return array (
     'name' => 'App\\Utilities\\Graphics::resize',
     'type' => 'method',
     'description' => 'Resizes a image file',
+  ),
+  'app.wakeup' => 
+  array (
+    'name' => 'App::__wakeup',
+    'type' => 'method',
+    'description' => 'Prevents multiple app instances',
   ),
 );

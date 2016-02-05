@@ -1,24 +1,19 @@
 <?php
 return array (
-  'name' => 'getOptions',
+  'name' => '__toString',
   'parameters' => 
   array (
   ),
   'comment' => 
   array (
-    'description' => 'Returns the options set for the current addon',
+    'description' => '',
     'type' => NULL,
     'parameters' => 
     array (
     ),
-    'return' => 
-    array (
-      'type' => 'array',
-      'description' => 'The options set for the current addon',
-    ),
+    'return' => NULL,
     'exceptions' => 
     array (
-      0 => '\\App\\InvalidConfigOptionException',
     ),
   ),
   'isPrivate' => false,
@@ -30,5 +25,5 @@ return array (
   'isConstructor' => false,
   'isDestructor' => false,
   'type' => 'method',
-  'class' => 'App\\AddonContext',
+  'class' => 'App\\InvalidConfigOptionException',
 );

@@ -19,7 +19,7 @@ return array (
     0 => 
     array (
       'name' => 'VERSION',
-      'value' => '0.1.0',
+      'value' => '0.2.0',
       'type' => 'string',
     ),
   ),
@@ -89,7 +89,7 @@ return array (
     ),
     1 => 
     array (
-      'name' => 'includeComponentFile',
+      'name' => 'getComponentFileContent',
       'parameters' => 
       array (
         0 => 
@@ -128,11 +128,12 @@ return array (
         ),
         'return' => 
         array (
-          'type' => 'void',
-          'description' => 'No value is returned',
+          'type' => 'string',
+          'description' => NULL,
         ),
         'exceptions' => 
         array (
+          0 => '\\Exception',
         ),
       ),
       'isPrivate' => false,
@@ -359,78 +360,6 @@ return array (
     ),
     6 => 
     array (
-      'name' => 'getComponentContent',
-      'parameters' => 
-      array (
-        0 => 
-        array (
-          'name' => 'file',
-          'value' => NULL,
-          'type' => 'string',
-          'isOptional' => false,
-        ),
-        1 => 
-        array (
-          'name' => 'attributes',
-          'value' => 
-          array (
-          ),
-          'type' => 'array',
-          'isOptional' => true,
-        ),
-        2 => 
-        array (
-          'name' => 'innerHTML',
-          'value' => '',
-          'type' => 'string',
-          'isOptional' => true,
-        ),
-      ),
-      'comment' => 
-      array (
-        'description' => '',
-        'type' => NULL,
-        'parameters' => 
-        array (
-          0 => 
-          array (
-            'name' => 'file',
-            'type' => 'string',
-            'description' => NULL,
-          ),
-          1 => 
-          array (
-            'name' => 'attributes',
-            'type' => 'array',
-            'description' => NULL,
-          ),
-          2 => 
-          array (
-            'name' => 'innerHTML',
-            'type' => 'string',
-            'description' => NULL,
-          ),
-        ),
-        'return' => 
-        array (
-          'type' => 'string',
-          'description' => NULL,
-        ),
-        'exceptions' => 
-        array (
-        ),
-      ),
-      'isPrivate' => true,
-      'isProtected' => false,
-      'isPublic' => false,
-      'isStatic' => false,
-      'isAbstract' => false,
-      'isFinal' => false,
-      'isConstructor' => false,
-      'isDestructor' => false,
-    ),
-    7 => 
-    array (
       'name' => 'getDOMElementAttributes',
       'parameters' => 
       array (
@@ -473,7 +402,7 @@ return array (
       'isConstructor' => false,
       'isDestructor' => false,
     ),
-    8 => 
+    7 => 
     array (
       'name' => 'getDOMDocument',
       'parameters' => 
@@ -517,7 +446,7 @@ return array (
       'isConstructor' => false,
       'isDestructor' => false,
     ),
-    9 => 
+    8 => 
     array (
       'name' => 'getInnerHTML',
       'parameters' => 
@@ -561,7 +490,7 @@ return array (
       'isConstructor' => false,
       'isDestructor' => false,
     ),
-    10 => 
+    9 => 
     array (
       'name' => 'trimDOMElement',
       'parameters' => 
@@ -601,9 +530,9 @@ return array (
       'isConstructor' => false,
       'isDestructor' => false,
     ),
-    11 => 
+    10 => 
     array (
-      'name' => 'handleInvalidTagWarning',
+      'name' => 'handleInvalidHTMLErrors',
       'parameters' => 
       array (
         0 => 

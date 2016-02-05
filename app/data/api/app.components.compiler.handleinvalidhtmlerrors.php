@@ -1,54 +1,54 @@
 <?php
 return array (
-  'name' => 'includeComponentFile',
+  'name' => 'handleInvalidHTMLErrors',
   'parameters' => 
   array (
     0 => 
     array (
-      'name' => 'file',
+      'name' => 'errorNumber',
       'value' => NULL,
-      'type' => 'string',
+      'type' => 'int',
       'isOptional' => false,
     ),
     1 => 
     array (
-      'name' => 'component',
+      'name' => 'errorMessage',
       'value' => NULL,
-      'type' => 'App\\Component',
+      'type' => 'string',
       'isOptional' => false,
     ),
   ),
   'comment' => 
   array (
-    'description' => 'Includes the component file providing context information',
+    'description' => '',
     'type' => NULL,
     'parameters' => 
     array (
       0 => 
       array (
-        'name' => 'file',
-        'type' => 'string',
-        'description' => 'The file of the component',
+        'name' => 'errorNumber',
+        'type' => 'int',
+        'description' => NULL,
       ),
       1 => 
       array (
-        'name' => 'component',
-        'type' => 'App\\Component',
-        'description' => 'The component object for the tag specified',
+        'name' => 'errorMessage',
+        'type' => 'string',
+        'description' => NULL,
       ),
     ),
     'return' => 
     array (
-      'type' => 'void',
-      'description' => 'No value is returned',
+      'type' => 'boolean',
+      'description' => NULL,
     ),
     'exceptions' => 
     array (
     ),
   ),
   'isPrivate' => false,
-  'isProtected' => true,
-  'isPublic' => false,
+  'isProtected' => false,
+  'isPublic' => true,
   'isStatic' => false,
   'isAbstract' => false,
   'isFinal' => false,

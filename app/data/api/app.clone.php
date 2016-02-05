@@ -1,28 +1,15 @@
 <?php
 return array (
-  'name' => 'respond',
+  'name' => '__clone',
   'parameters' => 
   array (
-    0 => 
-    array (
-      'name' => 'response',
-      'value' => NULL,
-      'type' => 'App\\Response',
-      'isOptional' => false,
-    ),
   ),
   'comment' => 
   array (
-    'description' => 'Outputs a response',
+    'description' => 'Prevents multiple app instances',
     'type' => NULL,
     'parameters' => 
     array (
-      0 => 
-      array (
-        'name' => 'response',
-        'type' => 'App\\Response',
-        'description' => 'The response object to output',
-      ),
     ),
     'return' => 
     array (
@@ -31,8 +18,7 @@ return array (
     ),
     'exceptions' => 
     array (
-      0 => '\\InvalidArgumentException',
-      1 => '\\Exception',
+      0 => '\\Exception',
     ),
   ),
   'isPrivate' => false,

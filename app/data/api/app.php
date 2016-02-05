@@ -19,7 +19,7 @@ return array (
     0 => 
     array (
       'name' => 'VERSION',
-      'value' => '0.6.0',
+      'value' => '0.6.2',
       'type' => 'string',
     ),
   ),
@@ -491,6 +491,7 @@ return array (
         'exceptions' => 
         array (
           0 => '\\InvalidArgumentException',
+          1 => '\\Exception',
         ),
       ),
       'isPrivate' => false,
@@ -522,11 +523,12 @@ return array (
         ),
         'exceptions' => 
         array (
+          0 => '\\Exception',
         ),
       ),
-      'isPrivate' => true,
+      'isPrivate' => false,
       'isProtected' => false,
-      'isPublic' => false,
+      'isPublic' => true,
       'isStatic' => false,
       'isAbstract' => false,
       'isFinal' => false,
@@ -553,11 +555,12 @@ return array (
         ),
         'exceptions' => 
         array (
+          0 => '\\Exception',
         ),
       ),
-      'isPrivate' => true,
+      'isPrivate' => false,
       'isProtected' => false,
-      'isPublic' => false,
+      'isPublic' => true,
       'isStatic' => false,
       'isAbstract' => false,
       'isFinal' => false,

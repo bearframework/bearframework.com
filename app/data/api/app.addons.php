@@ -95,6 +95,7 @@ return array (
         'exceptions' => 
         array (
           0 => '\\InvalidArgumentException',
+          1 => '\\App\\InvalidConfigOptionException',
         ),
       ),
       'isPrivate' => false,
@@ -107,52 +108,6 @@ return array (
       'isDestructor' => false,
     ),
     1 => 
-    array (
-      'name' => 'load',
-      'parameters' => 
-      array (
-        0 => 
-        array (
-          'name' => 'id',
-          'value' => NULL,
-          'type' => 'string',
-          'isOptional' => false,
-        ),
-      ),
-      'comment' => 
-      array (
-        'description' => 'Loads the addon index file',
-        'type' => NULL,
-        'parameters' => 
-        array (
-          0 => 
-          array (
-            'name' => 'id',
-            'type' => 'string',
-            'description' => 'The id of the addon',
-          ),
-        ),
-        'return' => 
-        array (
-          'type' => 'void',
-          'description' => 'No value is returned',
-        ),
-        'exceptions' => 
-        array (
-          0 => '\\Exception',
-          1 => '\\InvalidArgumentException',
-        ),
-      ),
-      'isPrivate' => true,
-      'isProtected' => false,
-      'isPublic' => false,
-      'isStatic' => false,
-      'isAbstract' => false,
-      'isFinal' => false,
-      'isConstructor' => false,
-      'isDestructor' => false,
-    ),
-    2 => 
     array (
       'name' => 'getOptions',
       'parameters' => 

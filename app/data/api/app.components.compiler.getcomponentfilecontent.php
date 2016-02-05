@@ -1,54 +1,55 @@
 <?php
 return array (
-  'name' => 'handleInvalidTagWarning',
+  'name' => 'getComponentFileContent',
   'parameters' => 
   array (
     0 => 
     array (
-      'name' => 'errorNumber',
+      'name' => 'file',
       'value' => NULL,
-      'type' => 'int',
+      'type' => 'string',
       'isOptional' => false,
     ),
     1 => 
     array (
-      'name' => 'errorMessage',
+      'name' => 'component',
       'value' => NULL,
-      'type' => 'string',
+      'type' => 'App\\Component',
       'isOptional' => false,
     ),
   ),
   'comment' => 
   array (
-    'description' => '',
+    'description' => 'Includes the component file providing context information',
     'type' => NULL,
     'parameters' => 
     array (
       0 => 
       array (
-        'name' => 'errorNumber',
-        'type' => 'int',
-        'description' => NULL,
+        'name' => 'file',
+        'type' => 'string',
+        'description' => 'The file of the component',
       ),
       1 => 
       array (
-        'name' => 'errorMessage',
-        'type' => 'string',
-        'description' => NULL,
+        'name' => 'component',
+        'type' => 'App\\Component',
+        'description' => 'The component object for the tag specified',
       ),
     ),
     'return' => 
     array (
-      'type' => 'boolean',
+      'type' => 'string',
       'description' => NULL,
     ),
     'exceptions' => 
     array (
+      0 => '\\Exception',
     ),
   ),
   'isPrivate' => false,
-  'isProtected' => false,
-  'isPublic' => true,
+  'isProtected' => true,
+  'isPublic' => false,
   'isStatic' => false,
   'isAbstract' => false,
   'isFinal' => false,

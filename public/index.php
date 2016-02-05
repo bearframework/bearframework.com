@@ -11,4 +11,5 @@ $app = new App(
         'environment' => 'development'
     ]
 );
+
 $app->run();

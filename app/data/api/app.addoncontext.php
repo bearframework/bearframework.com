@@ -90,6 +90,47 @@ return array (
   array (
     0 => 
     array (
+      'name' => '__construct',
+      'parameters' => 
+      array (
+        0 => 
+        array (
+          'name' => 'dir',
+          'value' => NULL,
+          'type' => 'string',
+          'isOptional' => false,
+        ),
+      ),
+      'comment' => 
+      array (
+        'description' => 'The constructor',
+        'type' => NULL,
+        'parameters' => 
+        array (
+          0 => 
+          array (
+            'name' => 'dir',
+            'type' => 'string',
+            'description' => 'The directory where the current addond is located',
+          ),
+        ),
+        'return' => NULL,
+        'exceptions' => 
+        array (
+          0 => '\\InvalidArgumentException',
+        ),
+      ),
+      'isPrivate' => false,
+      'isProtected' => false,
+      'isPublic' => true,
+      'isStatic' => false,
+      'isAbstract' => false,
+      'isFinal' => false,
+      'isConstructor' => true,
+      'isDestructor' => false,
+    ),
+    1 => 
+    array (
       'name' => 'getOptions',
       'parameters' => 
       array (
@@ -108,7 +149,7 @@ return array (
         ),
         'exceptions' => 
         array (
-          0 => '\\Exception',
+          0 => '\\App\\InvalidConfigOptionException',
         ),
       ),
       'isPrivate' => false,
@@ -118,47 +159,6 @@ return array (
       'isAbstract' => false,
       'isFinal' => false,
       'isConstructor' => false,
-      'isDestructor' => false,
-    ),
-    1 => 
-    array (
-      'name' => '__construct',
-      'parameters' => 
-      array (
-        0 => 
-        array (
-          'name' => 'dir',
-          'value' => NULL,
-          'type' => 'string',
-          'isOptional' => false,
-        ),
-      ),
-      'comment' => 
-      array (
-        'description' => 'The constructor',
-        'type' => NULL,
-        'parameters' => 
-        array (
-          0 => 
-          array (
-            'name' => 'dir',
-            'type' => 'string',
-            'description' => 'The directory where the current addon or application are located',
-          ),
-        ),
-        'return' => NULL,
-        'exceptions' => 
-        array (
-          0 => '\\InvalidArgumentException',
-        ),
-      ),
-      'isPrivate' => false,
-      'isProtected' => false,
-      'isPublic' => true,
-      'isStatic' => false,
-      'isAbstract' => false,
-      'isFinal' => false,
-      'isConstructor' => true,
       'isDestructor' => false,
     ),
     2 => 

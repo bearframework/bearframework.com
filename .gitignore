@@ -2,6 +2,5 @@ data/*
 addons/*
 logs/*
 nbproject/*
-others/*
 vendor/*
 composer.lock

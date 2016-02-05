@@ -5,29 +5,36 @@ return array (
   array (
     0 => 
     array (
-      'name' => 'dir',
-      'value' => NULL,
+      'name' => 'message',
+      'value' => '',
       'type' => 'string',
-      'isOptional' => false,
+      'isOptional' => true,
+    ),
+    1 => 
+    array (
+      'name' => 'code',
+      'value' => 0,
+      'type' => 'integer',
+      'isOptional' => true,
+    ),
+    2 => 
+    array (
+      'name' => 'previous',
+      'value' => NULL,
+      'type' => 'NULL',
+      'isOptional' => true,
     ),
   ),
   'comment' => 
   array (
-    'description' => 'The constructor',
+    'description' => '',
     'type' => NULL,
     'parameters' => 
     array (
-      0 => 
-      array (
-        'name' => 'dir',
-        'type' => 'string',
-        'description' => 'The directory where the current addond is located',
-      ),
     ),
     'return' => NULL,
     'exceptions' => 
     array (
-      0 => '\\InvalidArgumentException',
     ),
   ),
   'isPrivate' => false,
@@ -39,5 +46,5 @@ return array (
   'isConstructor' => true,
   'isDestructor' => false,
   'type' => 'method',
-  'class' => 'App\\AddonContext',
+  'class' => 'App\\InvalidConfigOptionException',
 );

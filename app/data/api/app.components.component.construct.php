@@ -1,24 +1,19 @@
 <?php
 return array (
-  'name' => 'getOptions',
+  'name' => '__construct',
   'parameters' => 
   array (
   ),
   'comment' => 
   array (
-    'description' => 'Returns the options set for the current addon',
+    'description' => 'The constructor',
     'type' => NULL,
     'parameters' => 
     array (
     ),
-    'return' => 
-    array (
-      'type' => 'array',
-      'description' => 'The options set for the current addon',
-    ),
+    'return' => NULL,
     'exceptions' => 
     array (
-      0 => '\\App\\InvalidConfigOptionException',
     ),
   ),
   'isPrivate' => false,
@@ -27,8 +22,8 @@ return array (
   'isStatic' => false,
   'isAbstract' => false,
   'isFinal' => false,
-  'isConstructor' => false,
+  'isConstructor' => true,
   'isDestructor' => false,
   'type' => 'method',
-  'class' => 'App\\AddonContext',
+  'class' => 'App\\Components\\Component',
 );

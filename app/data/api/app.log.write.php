@@ -40,12 +40,12 @@ return array (
     'return' => 
     array (
       'type' => 'boolean',
-      'description' => NULL,
+      'description' => 'TRUE if data is suceessfully written. FALSE otherwise.',
     ),
     'exceptions' => 
     array (
-      0 => '\\Exception',
-      1 => '\\InvalidArgumentException',
+      0 => '\\InvalidArgumentException',
+      1 => '\\App\\InvalidConfigOptionException',
     ),
   ),
   'isPrivate' => false,

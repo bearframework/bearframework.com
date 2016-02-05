@@ -29,7 +29,7 @@ return array (
       array (
         0 => 
         array (
-          'name' => 'sourceFileName',
+          'name' => 'sourceFilename',
           'value' => NULL,
           'type' => 'string',
           'isOptional' => false,
@@ -43,20 +43,19 @@ return array (
         array (
           0 => 
           array (
-            'name' => 'sourceFileName',
+            'name' => 'sourceFilename',
             'type' => 'string',
             'description' => 'The filename of the image',
           ),
         ),
         'return' => 
         array (
-          'type' => 'array',
-          'description' => 'The size of the image specified',
+          'type' => 'array[int,',
+          'description' => 'int] The size of the image specified',
         ),
         'exceptions' => 
         array (
           0 => '\\InvalidArgumentException',
-          1 => '\\Exception',
         ),
       ),
       'isPrivate' => false,
@@ -75,14 +74,14 @@ return array (
       array (
         0 => 
         array (
-          'name' => 'sourceFileName',
+          'name' => 'sourceFilename',
           'value' => NULL,
           'type' => 'string',
           'isOptional' => false,
         ),
         1 => 
         array (
-          'name' => 'destinationFileName',
+          'name' => 'destinationFilename',
           'value' => NULL,
           'type' => 'string',
           'isOptional' => false,
@@ -117,13 +116,13 @@ return array (
         array (
           0 => 
           array (
-            'name' => 'sourceFileName',
+            'name' => 'sourceFilename',
             'type' => 'string',
             'description' => 'The image file to resize',
           ),
           1 => 
           array (
-            'name' => 'destinationFileName',
+            'name' => 'destinationFilename',
             'type' => 'string',
             'description' => 'The filename where the result image will be saved',
           ),
@@ -153,6 +152,8 @@ return array (
         ),
         'exceptions' => 
         array (
+          0 => '\\InvalidArgumentException',
+          1 => '\\Exception',
         ),
       ),
       'isPrivate' => false,

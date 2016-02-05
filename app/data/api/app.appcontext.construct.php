@@ -13,7 +13,7 @@ return array (
   ),
   'comment' => 
   array (
-    'description' => 'The constructor',
+    'description' => 'The constructor',
     'type' => NULL,
     'parameters' => 
     array (
@@ -21,7 +21,7 @@ return array (
       array (
         'name' => 'dir',
         'type' => 'string',
-        'description' => 'The directory where the current addon or application are located',
+        'description' => 'The directory where the application is located',
       ),
     ),
     'return' => NULL,
