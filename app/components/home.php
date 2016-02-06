@@ -15,7 +15,7 @@
         <div class="slogan">A framework born in 2016</div>
         <p>
             The goal of Bear Framework is to help you start your next web project in less than a minute and help you make it successful. You've got <a href="<?= $app->getUrl('/documentation/routing/') ?>">routing</a>, <a href="<?= $app->getUrl('/documentation/data/') ?>">data storage</a>, <a href="<?= $app->getUrl('/documentation/addons/') ?>">addons</a>, <a href="<?= $app->getUrl('/documentation/logging/') ?>">logging</a>, <a href="<?= $app->getUrl('/documentation/assets/') ?>">assets helpers</a> and <a href="<?= $app->getUrl('/documentation/') ?>">many more useful tools</a>.<br/><br/>
-            Let's start with "Hi" and see how easy to use Bear Framework is.
+            Let's start with "Hi" and see how easy it is to use Bear Framework.
         </p>
 
     <component src="code"><?= "
