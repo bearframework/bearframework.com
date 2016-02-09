@@ -90,7 +90,7 @@ $app->hooks->add('responseCreated', function($response) use ($app, $context) {
 
 // Adds Google Analytics
 if ($app->config->environment === 'production') {
-    $app->addons->add('google-analytics-by-ivopetkov', [
+    $app->addons->add('ivopetkov/bearframework-google-analytics', [
         'trackingID' => 'UA-65160757-3'
     ]);
 }

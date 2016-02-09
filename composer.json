@@ -1,5 +1,6 @@
 {
     "require": {
-        "bearframework/bearframework": "*"
+        "bearframework/bearframework": "*",
+        "ivopetkov/bearframework-google-analytics": "*"
     }
 }
