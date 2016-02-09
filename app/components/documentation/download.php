@@ -7,7 +7,7 @@
         <p>
             <a href="https://getcomposer.org/">Composer</a> is a dependency manager and if you are already using it you can run:
         </p>
-    <component src="code">php composer.phar require bearframework/bearframework</component>
+    <component src="code">composer require bearframework/bearframework</component>
     <p>
         Then include the Composer autoload file in your project.
     </p>

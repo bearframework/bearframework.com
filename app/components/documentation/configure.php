@@ -4,7 +4,7 @@
             Here is a recommended file structure and configation for your web app.
         </p>
     <component src="code"><?= "\\app // This is the place where we write our app code
-\\addons // Addons dir
+\\addons // Addons dir (You can change it with \\vendor if you are using Composer)
 \\bearframework // Bear Framework files
     \\autoload.php
     \\...
