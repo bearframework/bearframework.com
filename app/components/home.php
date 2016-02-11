@@ -36,5 +36,11 @@ require 'vendor/autoload.php';
     <p>
         Browse the <a href="<?= $app->getUrl('/documentation/') ?>">documentation</a> for more examples.
     </p>
+    <h2>Learn more</h2>
+    <p><?php
+        foreach (Data::$articles as $code => $article) {
+            echo '<a href="' . $app->getUrl('/' . $code . '/') . '">' . $article['name'] . '</a> - ' . $article['description'] . '<br/>';
+        }
+        ?></p>
 </body>
 </html>

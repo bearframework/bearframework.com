@@ -7,7 +7,7 @@ if ($app->config->environment === 'production') {
 }
 
 // Register some classes for autoloading
-$context->classes->add('DocumentationData', 'classes/DocumentationData.php');
+$context->classes->add('Data', 'classes/Data.php');
 
 // Register an aliases for commonly used component
 $app->components->addAlias('code', 'file:' . $context->dir . 'components/code.php');
@@ -26,7 +26,7 @@ $app->routes->add('/documentation/', function() use ($context) {
 // Route
 $app->routes->add('/documentation/?/', function() use ($app, $context) {
     $code = $app->request->path[1];
-    if (DocumentationData::topicExists($code)) {
+    if (isset(Data::$documentationTopics[$code])) {
         return new App\Response\HTML('<component src="file:' . $context->dir . 'components/documentationTopic.php" topicCode="' . $code . '" />');
     }
     return new App\Response\NotFound();
@@ -35,8 +35,17 @@ $app->routes->add('/documentation/?/', function() use ($app, $context) {
 // Route
 $app->routes->add('/documentation/api/?/', function() use ($app, $context) {
     $code = $app->request->path[2];
-    if (DocumentationData::apiExists($code)) {
+    if (Data::apiExists($code)) {
         return new App\Response\HTML('<component src="file:' . $context->dir . 'components/documentationAPI.php" apiCode="' . $code . '" />');
+    }
+    return new App\Response\NotFound();
+});
+
+// Articles
+$app->routes->add('/?/', function() use ($app, $context) {
+    $code = $app->request->path[0];
+    if (isset(Data::$articles[$code])) {
+        return new App\Response\HTML('<component src="file:' . $context->dir . 'components/articles/' . $code . '.php" />');
     }
     return new App\Response\NotFound();
 });

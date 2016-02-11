@@ -3,7 +3,7 @@
         <p><?php
             $prefix = (string) $component->prefix;
             $type = (string) $component->type;
-            $api = DocumentationData::getAPI();
+            $api = Data::getAPI();
             foreach ($api as $code => $endpoint) {
                 if (isset($prefix{0}) && strpos($endpoint['name'], $prefix) !== 0) {
                     continue;

@@ -142,7 +142,7 @@ $data = include $context->dir . 'data/api/' . $component->apiCode . '.php';
         if ($data['type'] === 'class') {
             ?><h2>Methods</h2>
             <p><?php
-                $api = DocumentationData::getAPI();
+                $api = Data::getAPI();
                 $hasMethods = false;
                 foreach ($api as $methodCode => $methodData) {
                     if ($methodData['type'] === 'method') {
