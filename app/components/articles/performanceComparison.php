@@ -18,7 +18,7 @@
         <p>
             In the following chart, you can see the requests per second each framework can handle. The results for Bear Framework are great, but they are not surprising because the framework is optimized for simplicity - nothing is loaded until necessary. Even addons can't slow it down significantly, because only one file is loaded per addon, and the others when needed.
         </p>
-        <img alt="PHP Frameworks performance benchmarks" src="<?= $context->assets->getUrl('assets/performance-benchmarks.png') ?>" style="max-width:100%;"/>
+        <component src="file:<?= $context->dir . 'components/performanceChart.php' ?>"/>
         <p>
             We believe Bear Framework can be your fast start and help you grow without compromising performance and developer productivity.
         </p>

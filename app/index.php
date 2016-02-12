@@ -45,7 +45,7 @@ $app->routes->add('/documentation/api/?/', function() use ($app, $context) {
 $app->routes->add('/?/', function() use ($app, $context) {
     $code = $app->request->path[0];
     if (isset(Data::$articles[$code])) {
-        return new App\Response\HTML('<component src="file:' . $context->dir . 'components/articles/' . $code . '.php" />');
+        return new App\Response\HTML('<component src="file:' . $context->dir . 'components/articles/' . Data::$articles[$code]['file'] . '" />');
     }
     return new App\Response\NotFound();
 });

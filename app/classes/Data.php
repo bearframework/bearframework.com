@@ -78,24 +78,39 @@ class Data
     static public $articles = [
         'why-you-need-a-framework' => [
             'name' => 'Why you need a framework?',
+            'file' => 'whyYouNeedAFramework.php',
             'description' => 'The short answer is: you\'ll do a better job, faster.'
         ],
         'the-philosophy-behind-bear-framework' => [
             'name' => 'The philosophy behind Bear Framework',
+            'file' => 'thePhilosophyBehindBearFramework.php',
             'description' => 'Bear Framework is not just a new PHP framework.'
         ],
         'what-bear-framework-is' => [
             'name' => 'What Bear Framework is?',
+            'file' => 'whatBearFrameworkIs.php',
             'description' => 'Learn what you should expect from Bear Framework.'
         ],
         'what-bear-framework-is-not' => [
             'name' => 'What Bear Framework is not?',
+            'file' => 'whatBearFrameworkIsNot.php',
             'description' => 'You\'ll be glad we don\'t have some \'features\'.'
         ],
         'performance-comparison' => [
             'name' => 'Performance comparison',
+            'file' => 'performanceComparison.php',
             'description' => 'Bear Framework is powerful and faster than the competition.'
         ]
+    ];
+    static $performanceComparison = [
+        ['Bear Framework v0.6.2', 1031],
+        ['Code Igniter v3.0.4', 513],
+        ['Slim Framework v3.0.0', 395],
+        ['Lumen v5.2.4', 257],
+        ['Yii Framework v1.1.17', 225],
+        ['Cake PHP v3.2', 107],
+        ['Laravel v5.2.14', 72],
+        ['Symfony v3.0.2', 44]
     ];
     static private $apiCache = null;
 
