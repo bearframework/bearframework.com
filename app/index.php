@@ -2,7 +2,7 @@
 
 if ($app->config->environment === 'production') {
     // The website is behind CDN, so we must update the request data
-    $app->request->scheme = 'http';
+    $app->request->scheme = 'https';
     $app->request->host = 'bearframework.com';
 }
 
