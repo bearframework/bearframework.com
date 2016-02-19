@@ -5,27 +5,25 @@
             To enable logs just set the 'logsDir' configuration variable to the desired directory where the files will be written.
         </p>
     <component src="code"><?= "
-\$app = new App([
-    'logsDir' => __DIR__ . '/../logs/'
-]);
+\$app = new BearFramework\App();
+\$app->config->logsDir = __DIR__ . '/../logs/';
 " ?></component>
     <h2>API</h2>
-    <component src="apiList" prefix="App\Log"/>
+    <component src="apiList" prefix="BearFramework\App\Log"/>
     <h2>Examples</h2>
     <p>
-        Custom action logging
+        Custom info logging
     </p>
     <component src="code"><?= "
-\$app-&gt;log-&gt;write('visitors/ip.log', '111.222.333.444');
+\$app-&gt;logger-&gt;log('info', 'Visit from 111.222.333.444');
 " ?></component>
     <h2>Error logging</h2>
     <p>
         Enable error logging by settings 'logErrors' in the application config.
     </p>
     <component src="code"><?= "
-\$app = new App([
-    'logErrors' => true
-]);
+\$app = new BearFramework\App();
+\$app->config->logErrors = true;
 " ?></component>
 </body>
 </html>

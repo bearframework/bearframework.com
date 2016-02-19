@@ -5,22 +5,25 @@
             The $app->assets object enables to get a public URL for a specific asset. You can even resize images on the fly. The only requirement is that files must be located in a directory called '/assets/' or made public if they are in the data storage.
         </p>
         <h2>API</h2>
-        <component src="apiList" prefix="App\Assets"/>
-        <h2>
-            Files in the app directory
-        </h2>
-        <p>
-            This is how you can get the URL of an asset in your app directory
-        </p>
+    <component src="apiList" prefix="BearFramework\App\Assets"/>
+    <h2>
+        Files in the app or addon directories
+    </h2>
+    <p>
+        This is how you can get the URL of an asset in your app directory
+    </p>
     <component src="code"><?= "
-// All files in the /assets/ directory can be accessed publicly
-\$app-&gt;assets-&gt;getUrl('../app/assets/logo.png')
-// You can place this directory in other directories
-\$app-&gt;assets-&gt;getUrl('../app/path/to/assets/logo.png')
+// You can mark a directory to be publicly accessible and get file url
+\$app-&gt;assets-&gt;addDir('../app/assets/');
+\$app-&gt;assets-&gt;getUrl('../app/assets/logo.png');
+
 // It's better to use the config value
-\$app-&gt;assets-&gt;getUrl(\$app->config->appDir . 'assets/logo.png')
-// or use this shortcut
-\$context-&gt;assets-&gt;getUrl('assets/logo.png')
+\$app-&gt;assets-&gt;addDir(\$app->config->appDir . 'assets/');
+\$app-&gt;assets-&gt;getUrl(\$app->config->appDir . 'assets/logo.png');
+
+// Or even better you can use the \$context object
+\$context-&gt;assets-&gt;addDir('assets/');
+\$context-&gt;assets-&gt;getUrl('assets/logo.png');
 " ?></component>
     <h2>
         Files in the data storage

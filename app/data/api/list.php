@@ -1,974 +1,932 @@
 <?php
 return array (
-  'app' => 
+  'bearframework.app' => 
   array (
-    'name' => 'App',
+    'name' => 'BearFramework\\App',
     'type' => 'class',
-    'description' => 'The is the class used to instantiate and configure you application.',
+    'description' => 'The is the class used to instantiate and configure you application.',
   ),
-  'app.addoncontext' => 
+  'bearframework.app.addoncontext' => 
   array (
-    'name' => 'App\\AddonContext',
+    'name' => 'BearFramework\\App\\AddonContext',
     'type' => 'class',
     'description' => 'Provides information about the addon location and utility functions',
   ),
-  'app.addoncontext.construct' => 
+  'bearframework.app.addoncontext.construct' => 
   array (
-    'name' => 'App\\AddonContext::__construct',
+    'name' => 'BearFramework\\App\\AddonContext::__construct',
     'type' => 'method',
     'description' => 'The constructor',
   ),
-  'app.addoncontext.getoptions' => 
+  'bearframework.app.addoncontext.load' => 
   array (
-    'name' => 'App\\AddonContext::getOptions',
-    'type' => 'method',
-    'description' => 'Returns the options set for the current addon',
-  ),
-  'app.addoncontext.load' => 
-  array (
-    'name' => 'App\\AddonContext::load',
+    'name' => 'BearFramework\\App\\AddonContext::load',
     'type' => 'method',
     'description' => 'Loads a file from the current context dir',
   ),
-  'app.addons' => 
+  'bearframework.app.addons' => 
   array (
-    'name' => 'App\\Addons',
+    'name' => 'BearFramework\\App\\Addons',
     'type' => 'class',
     'description' => 'Provides a way to enable addons and manage their options',
   ),
-  'app.addons.add' => 
+  'bearframework.app.addons.add' => 
   array (
-    'name' => 'App\\Addons::add',
+    'name' => 'BearFramework\\App\\Addons::add',
     'type' => 'method',
     'description' => 'Enables an addon and saves the provided options',
   ),
-  'app.addons.getoptions' => 
+  'bearframework.app.addons.getlist' => 
   array (
-    'name' => 'App\\Addons::getOptions',
+    'name' => 'BearFramework\\App\\Addons::getList',
     'type' => 'method',
-    'description' => 'Returns the options set for the addon specified',
+    'description' => 'Returns list of the added addons',
   ),
-  'app.appcontext' => 
+  'bearframework.app.appcontext' => 
   array (
-    'name' => 'App\\AppContext',
+    'name' => 'BearFramework\\App\\AppContext',
     'type' => 'class',
     'description' => 'Provides information about the application location and utility functions',
   ),
-  'app.appcontext.construct' => 
+  'bearframework.app.appcontext.construct' => 
   array (
-    'name' => 'App\\AppContext::__construct',
+    'name' => 'BearFramework\\App\\AppContext::__construct',
     'type' => 'method',
     'description' => 'The constructor',
   ),
-  'app.appcontext.load' => 
+  'bearframework.app.appcontext.load' => 
   array (
-    'name' => 'App\\AppContext::load',
+    'name' => 'BearFramework\\App\\AppContext::load',
     'type' => 'method',
     'description' => 'Loads a file from the current context dir',
   ),
-  'app.assets' => 
+  'bearframework.app.assets' => 
   array (
-    'name' => 'App\\Assets',
+    'name' => 'BearFramework\\App\\Assets',
     'type' => 'class',
     'description' => 'Provides utility functions for assets',
   ),
-  'app.assets.getfilename' => 
+  'bearframework.app.assets.adddir' => 
   array (
-    'name' => 'App\\Assets::getFilename',
+    'name' => 'BearFramework\\App\\Assets::addDir',
+    'type' => 'method',
+    'description' => 'Registers a directory that will be publicly accessible',
+  ),
+  'bearframework.app.assets.getfilename' => 
+  array (
+    'name' => 'BearFramework\\App\\Assets::getFilename',
     'type' => 'method',
     'description' => 'Returns the local filename for a given URL path',
   ),
-  'app.assets.getmimetype' => 
+  'bearframework.app.assets.getmimetype' => 
   array (
-    'name' => 'App\\Assets::getMimeType',
+    'name' => 'BearFramework\\App\\Assets::getMimeType',
     'type' => 'method',
     'description' => 'Finds the mime type of a filename by checking it\'s extension',
   ),
-  'app.assets.geturl' => 
+  'bearframework.app.assets.geturl' => 
   array (
-    'name' => 'App\\Assets::getUrl',
+    'name' => 'BearFramework\\App\\Assets::getUrl',
     'type' => 'method',
     'description' => 'Returns a public URL for the specified filename',
   ),
-  'app.cache' => 
+  'bearframework.app.cache' => 
   array (
-    'name' => 'App\\Cache',
+    'name' => 'BearFramework\\App\\Cache',
     'type' => 'class',
     'description' => 'Data cache',
   ),
-  'app.cache.delete' => 
+  'bearframework.app.cache.delete' => 
   array (
-    'name' => 'App\\Cache::delete',
+    'name' => 'BearFramework\\App\\Cache::delete',
     'type' => 'method',
     'description' => 'Deletes data fom the cache',
   ),
-  'app.cache.exists' => 
+  'bearframework.app.cache.get' => 
   array (
-    'name' => 'App\\Cache::exists',
-    'type' => 'method',
-    'description' => 'Checks if the data for the key specified exists',
-  ),
-  'app.cache.get' => 
-  array (
-    'name' => 'App\\Cache::get',
+    'name' => 'BearFramework\\App\\Cache::get',
     'type' => 'method',
     'description' => 'Return the saved data from the cache of the default value specified',
   ),
-  'app.cache.set' => 
+  'bearframework.app.cache.set' => 
   array (
-    'name' => 'App\\Cache::set',
+    'name' => 'BearFramework\\App\\Cache::set',
     'type' => 'method',
     'description' => 'Saves data in the cache',
   ),
-  'app.classes' => 
+  'bearframework.app.classes' => 
   array (
-    'name' => 'App\\Classes',
+    'name' => 'BearFramework\\App\\Classes',
     'type' => 'class',
     'description' => 'Provides functionality for autoloading classes',
   ),
-  'app.classes.add' => 
+  'bearframework.app.classes.add' => 
   array (
-    'name' => 'App\\Classes::add',
+    'name' => 'BearFramework\\App\\Classes::add',
     'type' => 'method',
     'description' => 'Registers a class for autoloading',
   ),
-  'app.classes.load' => 
+  'bearframework.app.classes.construct' => 
   array (
-    'name' => 'App\\Classes::load',
+    'name' => 'BearFramework\\App\\Classes::__construct',
+    'type' => 'method',
+    'description' => 'The constructor',
+  ),
+  'bearframework.app.classes.load' => 
+  array (
+    'name' => 'BearFramework\\App\\Classes::load',
     'type' => 'method',
     'description' => 'Loads a class if registered',
   ),
-  'app.clone' => 
+  'bearframework.app.clone' => 
   array (
-    'name' => 'App::__clone',
+    'name' => 'BearFramework\\App::__clone',
     'type' => 'method',
     'description' => 'Prevents multiple app instances',
   ),
-  'app.components' => 
+  'bearframework.app.config' => 
   array (
-    'name' => 'App\\Components',
-    'type' => 'class',
-    'description' => 'HTML Server Components utilities',
-  ),
-  'app.components.addalias' => 
-  array (
-    'name' => 'App\\Components::addAlias',
-    'type' => 'method',
-    'description' => 'Adds alias to a specifil source',
-  ),
-  'app.components.compiler' => 
-  array (
-    'name' => 'App\\Components\\Compiler',
-    'type' => 'class',
-    'description' => 'Process HTML code and transforms component tags',
-  ),
-  'app.components.compiler.addalias' => 
-  array (
-    'name' => 'App\\Components\\Compiler::addAlias',
-    'type' => 'method',
-    'description' => 'Registers an alias',
-  ),
-  'app.components.compiler.constructcomponent' => 
-  array (
-    'name' => 'App\\Components\\Compiler::constructComponent',
-    'type' => 'method',
-    'description' => 'Constructs a Component object',
-  ),
-  'app.components.compiler.getcomponentfilecontent' => 
-  array (
-    'name' => 'App\\Components\\Compiler::getComponentFileContent',
-    'type' => 'method',
-    'description' => 'Includes the component file providing context information',
-  ),
-  'app.components.compiler.handleinvalidhtmlerrors' => 
-  array (
-    'name' => 'App\\Components\\Compiler::handleInvalidHTMLErrors',
-    'type' => 'method',
-    'description' => '',
-  ),
-  'app.components.compiler.process' => 
-  array (
-    'name' => 'App\\Components\\Compiler::process',
-    'type' => 'method',
-    'description' => 'Process (merge) components',
-  ),
-  'app.components.compiler.processdata' => 
-  array (
-    'name' => 'App\\Components\\Compiler::processData',
-    'type' => 'method',
-    'description' => '',
-  ),
-  'app.components.compiler.processfile' => 
-  array (
-    'name' => 'App\\Components\\Compiler::processFile',
-    'type' => 'method',
-    'description' => '',
-  ),
-  'app.components.component' => 
-  array (
-    'name' => 'App\\Components\\Component',
-    'type' => 'class',
-    'description' => 'HTML Server Components object',
-  ),
-  'app.components.component.construct' => 
-  array (
-    'name' => 'App\\Components\\Component::__construct',
-    'type' => 'method',
-    'description' => 'The constructor',
-  ),
-  'app.components.component.get' => 
-  array (
-    'name' => 'App\\Components\\Component::__get',
-    'type' => 'method',
-    'description' => '',
-  ),
-  'app.components.component.getattribute' => 
-  array (
-    'name' => 'App\\Components\\Component::getAttribute',
-    'type' => 'method',
-    'description' => '',
-  ),
-  'app.components.inserthtml' => 
-  array (
-    'name' => 'App\\Components::insertHTML',
-    'type' => 'method',
-    'description' => 'Inserts HTML code (or HTML Component) in the position specified',
-  ),
-  'app.components.process' => 
-  array (
-    'name' => 'App\\Components::process',
-    'type' => 'method',
-    'description' => 'Runs the compiler over the content specified',
-  ),
-  'app.config' => 
-  array (
-    'name' => 'App\\Config',
+    'name' => 'BearFramework\\App\\Config',
     'type' => 'class',
     'description' => 'The application configuration',
   ),
-  'app.config.construct' => 
+  'bearframework.app.config.construct' => 
   array (
-    'name' => 'App\\Config::__construct',
+    'name' => 'BearFramework\\App\\Config::__construct',
     'type' => 'method',
     'description' => 'The constructor',
   ),
-  'app.config.get' => 
+  'bearframework.app.config.get' => 
   array (
-    'name' => 'App\\Config::__get',
+    'name' => 'BearFramework\\App\\Config::__get',
     'type' => 'method',
     'description' => 'Returns the value of the configuration option specified',
   ),
-  'app.config.isset' => 
+  'bearframework.app.config.isset' => 
   array (
-    'name' => 'App\\Config::__isset',
+    'name' => 'BearFramework\\App\\Config::__isset',
     'type' => 'method',
     'description' => 'Checks if the configuration option specified is set',
   ),
-  'app.config.set' => 
+  'bearframework.app.config.set' => 
   array (
-    'name' => 'App\\Config::__set',
+    'name' => 'BearFramework\\App\\Config::__set',
     'type' => 'method',
     'description' => 'Sets the value of the configuration option specified',
   ),
-  'app.construct' => 
+  'bearframework.app.construct' => 
   array (
-    'name' => 'App::__construct',
+    'name' => 'BearFramework\\App::__construct',
     'type' => 'method',
     'description' => 'The constructor',
   ),
-  'app.context' => 
+  'bearframework.app.container' => 
   array (
-    'name' => 'App\\Context',
+    'name' => 'BearFramework\\App\\Container',
+    'type' => 'class',
+    'description' => 'Dependency Injection container',
+  ),
+  'bearframework.app.container.add' => 
+  array (
+    'name' => 'BearFramework\\App\\Container::add',
+    'type' => 'method',
+    'description' => 'Registeres a value for the specified name',
+  ),
+  'bearframework.app.container.get' => 
+  array (
+    'name' => 'BearFramework\\App\\Container::get',
+    'type' => 'method',
+    'description' => 'Returns a object and returns it',
+  ),
+  'bearframework.app.container.has' => 
+  array (
+    'name' => 'BearFramework\\App\\Container::has',
+    'type' => 'method',
+    'description' => 'Returns information about whether the service is added',
+  ),
+  'bearframework.app.context' => 
+  array (
+    'name' => 'BearFramework\\App\\Context',
     'type' => 'class',
     'description' => 'Provides information about addons and application location and utility functions',
   ),
-  'app.context.assets' => 
+  'bearframework.app.context.assets' => 
   array (
-    'name' => 'App\\Context\\Assets',
+    'name' => 'BearFramework\\App\\Context\\Assets',
     'type' => 'class',
     'description' => 'Provides utility functions for assets in the current context',
   ),
-  'app.context.assets.construct' => 
+  'bearframework.app.context.assets.adddir' => 
   array (
-    'name' => 'App\\Context\\Assets::__construct',
+    'name' => 'BearFramework\\App\\Context\\Assets::addDir',
+    'type' => 'method',
+    'description' => 'Registers a directory that will be publicly accessible relative to the current addon or application location',
+  ),
+  'bearframework.app.context.assets.construct' => 
+  array (
+    'name' => 'BearFramework\\App\\Context\\Assets::__construct',
     'type' => 'method',
     'description' => 'The constructor',
   ),
-  'app.context.assets.geturl' => 
+  'bearframework.app.context.assets.geturl' => 
   array (
-    'name' => 'App\\Context\\Assets::getUrl',
+    'name' => 'BearFramework\\App\\Context\\Assets::getUrl',
     'type' => 'method',
     'description' => 'Returns a public URL for the specified filename in the current context',
   ),
-  'app.context.classes' => 
+  'bearframework.app.context.classes' => 
   array (
-    'name' => 'App\\Context\\Classes',
+    'name' => 'BearFramework\\App\\Context\\Classes',
     'type' => 'class',
     'description' => 'Provides functionality for autoloading classes in the current context',
   ),
-  'app.context.classes.add' => 
+  'bearframework.app.context.classes.add' => 
   array (
-    'name' => 'App\\Context\\Classes::add',
+    'name' => 'BearFramework\\App\\Context\\Classes::add',
     'type' => 'method',
     'description' => 'Registers a class for autoloading in the current context',
   ),
-  'app.context.classes.construct' => 
+  'bearframework.app.context.classes.construct' => 
   array (
-    'name' => 'App\\Context\\Classes::__construct',
+    'name' => 'BearFramework\\App\\Context\\Classes::__construct',
     'type' => 'method',
     'description' => 'The constructor',
   ),
-  'app.context.construct' => 
+  'bearframework.app.context.construct' => 
   array (
-    'name' => 'App\\Context::__construct',
+    'name' => 'BearFramework\\App\\Context::__construct',
     'type' => 'method',
     'description' => 'The constructor',
   ),
-  'app.context.load' => 
+  'bearframework.app.context.load' => 
   array (
-    'name' => 'App\\Context::load',
+    'name' => 'BearFramework\\App\\Context::load',
     'type' => 'method',
     'description' => 'Loads a file from the current context dir',
   ),
-  'app.data' => 
+  'bearframework.app.data' => 
   array (
-    'name' => 'App\\Data',
+    'name' => 'BearFramework\\App\\Data',
     'type' => 'class',
     'description' => 'Data storage',
   ),
-  'app.data.append' => 
+  'bearframework.app.data.append' => 
   array (
-    'name' => 'App\\Data::append',
+    'name' => 'BearFramework\\App\\Data::append',
     'type' => 'method',
     'description' => 'Appends data to the object specified. If the object does not exist, it will be created.',
   ),
-  'app.data.delete' => 
+  'bearframework.app.data.delete' => 
   array (
-    'name' => 'App\\Data::delete',
+    'name' => 'BearFramework\\App\\Data::delete',
     'type' => 'method',
     'description' => 'Deletes the object specified and it\'s metadata',
   ),
-  'app.data.duplicate' => 
+  'bearframework.app.data.duplicate' => 
   array (
-    'name' => 'App\\Data::duplicate',
+    'name' => 'BearFramework\\App\\Data::duplicate',
     'type' => 'method',
     'description' => 'Creates a copy of the object specified',
   ),
-  'app.data.get' => 
+  'bearframework.app.data.get' => 
   array (
-    'name' => 'App\\Data::get',
+    'name' => 'BearFramework\\App\\Data::get',
     'type' => 'method',
     'description' => 'Retrieves object data for specified key',
   ),
-  'app.data.getfilename' => 
+  'bearframework.app.data.getfilename' => 
   array (
-    'name' => 'App\\Data::getFilename',
+    'name' => 'BearFramework\\App\\Data::getFilename',
     'type' => 'method',
     'description' => 'Returns the filename of the object key specified',
   ),
-  'app.data.ispublic' => 
+  'bearframework.app.data.ispublic' => 
   array (
-    'name' => 'App\\Data::isPublic',
+    'name' => 'BearFramework\\App\\Data::isPublic',
     'type' => 'method',
     'description' => 'Checks if an object is marked as public',
   ),
-  'app.data.makeprivate' => 
+  'bearframework.app.data.makeprivate' => 
   array (
-    'name' => 'App\\Data::makePrivate',
+    'name' => 'BearFramework\\App\\Data::makePrivate',
     'type' => 'method',
     'description' => 'Marks object as private, so it cannot be accessed as an asset',
   ),
-  'app.data.makepublic' => 
+  'bearframework.app.data.makepublic' => 
   array (
-    'name' => 'App\\Data::makePublic',
+    'name' => 'BearFramework\\App\\Data::makePublic',
     'type' => 'method',
     'description' => 'Marks object as public so it can be accessed as an asset',
   ),
-  'app.data.rename' => 
+  'bearframework.app.data.rename' => 
   array (
-    'name' => 'App\\Data::rename',
+    'name' => 'BearFramework\\App\\Data::rename',
     'type' => 'method',
     'description' => 'Changes the key of the object specified',
   ),
-  'app.data.search' => 
+  'bearframework.app.data.search' => 
   array (
-    'name' => 'App\\Data::search',
+    'name' => 'BearFramework\\App\\Data::search',
     'type' => 'method',
     'description' => 'Searches for items',
   ),
-  'app.data.set' => 
+  'bearframework.app.data.set' => 
   array (
-    'name' => 'App\\Data::set',
+    'name' => 'BearFramework\\App\\Data::set',
     'type' => 'method',
     'description' => 'Saves data',
   ),
-  'app.geturl' => 
+  'bearframework.app.get' => 
   array (
-    'name' => 'App::getUrl',
+    'name' => 'BearFramework\\App::__get',
+    'type' => 'method',
+    'description' => 'Returns an object from the dependency injection container',
+  ),
+  'bearframework.app.getcontext' => 
+  array (
+    'name' => 'BearFramework\\App::getContext',
+    'type' => 'method',
+    'description' => 'Creates a context object for the filename specified',
+  ),
+  'bearframework.app.geturl' => 
+  array (
+    'name' => 'BearFramework\\App::getUrl',
     'type' => 'method',
     'description' => 'Constructs a url for the path specified',
   ),
-  'app.hooks' => 
+  'bearframework.app.hooks' => 
   array (
-    'name' => 'App\\Hooks',
+    'name' => 'BearFramework\\App\\Hooks',
     'type' => 'class',
     'description' => 'Provides functionality for notifications and data requests',
   ),
-  'app.hooks.add' => 
+  'bearframework.app.hooks.add' => 
   array (
-    'name' => 'App\\Hooks::add',
+    'name' => 'BearFramework\\App\\Hooks::add',
     'type' => 'method',
     'description' => 'Registers callback for the name specified',
   ),
-  'app.hooks.execute' => 
+  'bearframework.app.hooks.execute' => 
   array (
-    'name' => 'App\\Hooks::execute',
+    'name' => 'BearFramework\\App\\Hooks::execute',
     'type' => 'method',
     'description' => 'Triggers execution of all callbacks hooked to the name specified',
   ),
-  'app.invalidconfigoptionexception' => 
+  'bearframework.app.initialize' => 
   array (
-    'name' => 'App\\InvalidConfigOptionException',
+    'name' => 'BearFramework\\App::initialize',
+    'type' => 'method',
+    'description' => 'Initializes the environment and context data',
+  ),
+  'bearframework.app.invalidconfigoptionexception' => 
+  array (
+    'name' => 'BearFramework\\App\\InvalidConfigOptionException',
     'type' => 'class',
     'description' => 'Construct the exception',
   ),
-  'app.invalidconfigoptionexception.construct' => 
+  'bearframework.app.invalidconfigoptionexception.construct' => 
   array (
-    'name' => 'App\\InvalidConfigOptionException::__construct',
+    'name' => 'BearFramework\\App\\InvalidConfigOptionException::__construct',
     'type' => 'method',
     'description' => '',
   ),
-  'app.invalidconfigoptionexception.getcode' => 
+  'bearframework.app.invalidconfigoptionexception.getcode' => 
   array (
-    'name' => 'App\\InvalidConfigOptionException::getCode',
+    'name' => 'BearFramework\\App\\InvalidConfigOptionException::getCode',
     'type' => 'method',
     'description' => '',
   ),
-  'app.invalidconfigoptionexception.getfile' => 
+  'bearframework.app.invalidconfigoptionexception.getfile' => 
   array (
-    'name' => 'App\\InvalidConfigOptionException::getFile',
+    'name' => 'BearFramework\\App\\InvalidConfigOptionException::getFile',
     'type' => 'method',
     'description' => '',
   ),
-  'app.invalidconfigoptionexception.getline' => 
+  'bearframework.app.invalidconfigoptionexception.getline' => 
   array (
-    'name' => 'App\\InvalidConfigOptionException::getLine',
+    'name' => 'BearFramework\\App\\InvalidConfigOptionException::getLine',
     'type' => 'method',
     'description' => '',
   ),
-  'app.invalidconfigoptionexception.getmessage' => 
+  'bearframework.app.invalidconfigoptionexception.getmessage' => 
   array (
-    'name' => 'App\\InvalidConfigOptionException::getMessage',
+    'name' => 'BearFramework\\App\\InvalidConfigOptionException::getMessage',
     'type' => 'method',
     'description' => '',
   ),
-  'app.invalidconfigoptionexception.getprevious' => 
+  'bearframework.app.invalidconfigoptionexception.getprevious' => 
   array (
-    'name' => 'App\\InvalidConfigOptionException::getPrevious',
+    'name' => 'BearFramework\\App\\InvalidConfigOptionException::getPrevious',
     'type' => 'method',
     'description' => '',
   ),
-  'app.invalidconfigoptionexception.gettrace' => 
+  'bearframework.app.invalidconfigoptionexception.gettrace' => 
   array (
-    'name' => 'App\\InvalidConfigOptionException::getTrace',
+    'name' => 'BearFramework\\App\\InvalidConfigOptionException::getTrace',
     'type' => 'method',
     'description' => '',
   ),
-  'app.invalidconfigoptionexception.gettraceasstring' => 
+  'bearframework.app.invalidconfigoptionexception.gettraceasstring' => 
   array (
-    'name' => 'App\\InvalidConfigOptionException::getTraceAsString',
+    'name' => 'BearFramework\\App\\InvalidConfigOptionException::getTraceAsString',
     'type' => 'method',
     'description' => '',
   ),
-  'app.invalidconfigoptionexception.tostring' => 
+  'bearframework.app.invalidconfigoptionexception.tostring' => 
   array (
-    'name' => 'App\\InvalidConfigOptionException::__toString',
+    'name' => 'BearFramework\\App\\InvalidConfigOptionException::__toString',
     'type' => 'method',
     'description' => '',
   ),
-  'app.load' => 
+  'bearframework.app.isset' => 
   array (
-    'name' => 'App::load',
+    'name' => 'BearFramework\\App::__isset',
+    'type' => 'method',
+    'description' => 'Returns information about whether the service is added in the dependency injection container',
+  ),
+  'bearframework.app.load' => 
+  array (
+    'name' => 'BearFramework\\App::load',
     'type' => 'method',
     'description' => 'Loads a file',
   ),
-  'app.log' => 
+  'bearframework.app.logger' => 
   array (
-    'name' => 'App\\Log',
+    'name' => 'BearFramework\\App\\Logger',
     'type' => 'class',
     'description' => 'Provides logging functionlity',
   ),
-  'app.log.write' => 
+  'bearframework.app.logger.log' => 
   array (
-    'name' => 'App\\Log::write',
+    'name' => 'BearFramework\\App\\Logger::log',
     'type' => 'method',
     'description' => 'Appends data to the file specified. The file will be created if not exists.',
   ),
-  'app.request' => 
+  'bearframework.app.request' => 
   array (
-    'name' => 'App\\Request',
+    'name' => 'BearFramework\\App\\Request',
     'type' => 'class',
     'description' => 'Provides information about the current request',
   ),
-  'app.request.construct' => 
+  'bearframework.app.request.construct' => 
   array (
-    'name' => 'App\\Request::__construct',
+    'name' => 'BearFramework\\App\\Request::__construct',
     'type' => 'method',
     'description' => 'The constructor',
   ),
-  'app.request.get' => 
+  'bearframework.app.request.get' => 
   array (
-    'name' => 'App\\Request::__get',
+    'name' => 'BearFramework\\App\\Request::__get',
     'type' => 'method',
     'description' => 'Magic method',
   ),
-  'app.request.isset' => 
+  'bearframework.app.request.isset' => 
   array (
-    'name' => 'App\\Request::__isset',
+    'name' => 'BearFramework\\App\\Request::__isset',
     'type' => 'method',
     'description' => 'Magic method',
   ),
-  'app.request.path' => 
+  'bearframework.app.request.path' => 
   array (
-    'name' => 'App\\Request\\Path',
+    'name' => 'BearFramework\\App\\Request\\Path',
     'type' => 'class',
     'description' => 'Provides information about the request path',
   ),
-  'app.request.path.construct' => 
+  'bearframework.app.request.path.construct' => 
   array (
-    'name' => 'App\\Request\\Path::__construct',
+    'name' => 'BearFramework\\App\\Request\\Path::__construct',
     'type' => 'method',
     'description' => 'The constructor',
   ),
-  'app.request.path.offsetexists' => 
+  'bearframework.app.request.path.offsetexists' => 
   array (
-    'name' => 'App\\Request\\Path::offsetExists',
+    'name' => 'BearFramework\\App\\Request\\Path::offsetExists',
     'type' => 'method',
     'description' => 'Checks if a part part for the current index specified exists',
   ),
-  'app.request.path.offsetget' => 
+  'bearframework.app.request.path.offsetget' => 
   array (
-    'name' => 'App\\Request\\Path::offsetGet',
+    'name' => 'BearFramework\\App\\Request\\Path::offsetGet',
     'type' => 'method',
     'description' => 'Returns the path part for the index specified',
   ),
-  'app.request.path.offsetset' => 
+  'bearframework.app.request.path.offsetset' => 
   array (
-    'name' => 'App\\Request\\Path::offsetSet',
+    'name' => 'BearFramework\\App\\Request\\Path::offsetSet',
     'type' => 'method',
     'description' => 'Not implemented',
   ),
-  'app.request.path.offsetunset' => 
+  'bearframework.app.request.path.offsetunset' => 
   array (
-    'name' => 'App\\Request\\Path::offsetUnset',
+    'name' => 'BearFramework\\App\\Request\\Path::offsetUnset',
     'type' => 'method',
     'description' => 'Not implemented',
   ),
-  'app.request.path.tostring' => 
+  'bearframework.app.request.path.tostring' => 
   array (
-    'name' => 'App\\Request\\Path::__toString',
+    'name' => 'BearFramework\\App\\Request\\Path::__toString',
     'type' => 'method',
     'description' => 'Returns the full path',
   ),
-  'app.request.query' => 
+  'bearframework.app.request.query' => 
   array (
-    'name' => 'App\\Request\\Query',
+    'name' => 'BearFramework\\App\\Request\\Query',
     'type' => 'class',
     'description' => 'Provides information about the request query string',
   ),
-  'app.request.query.construct' => 
+  'bearframework.app.request.query.construct' => 
   array (
-    'name' => 'App\\Request\\Query::__construct',
+    'name' => 'BearFramework\\App\\Request\\Query::__construct',
     'type' => 'method',
     'description' => 'The constructor',
   ),
-  'app.request.query.offsetexists' => 
+  'bearframework.app.request.query.offsetexists' => 
   array (
-    'name' => 'App\\Request\\Query::offsetExists',
+    'name' => 'BearFramework\\App\\Request\\Query::offsetExists',
     'type' => 'method',
     'description' => 'Checks if data for the current name specified exists',
   ),
-  'app.request.query.offsetget' => 
+  'bearframework.app.request.query.offsetget' => 
   array (
-    'name' => 'App\\Request\\Query::offsetGet',
+    'name' => 'BearFramework\\App\\Request\\Query::offsetGet',
     'type' => 'method',
     'description' => 'Returns the data for the name specified',
   ),
-  'app.request.query.offsetset' => 
+  'bearframework.app.request.query.offsetset' => 
   array (
-    'name' => 'App\\Request\\Query::offsetSet',
+    'name' => 'BearFramework\\App\\Request\\Query::offsetSet',
     'type' => 'method',
     'description' => 'Not implemented',
   ),
-  'app.request.query.offsetunset' => 
+  'bearframework.app.request.query.offsetunset' => 
   array (
-    'name' => 'App\\Request\\Query::offsetUnset',
+    'name' => 'BearFramework\\App\\Request\\Query::offsetUnset',
     'type' => 'method',
     'description' => 'Not implemented',
   ),
-  'app.request.query.tostring' => 
+  'bearframework.app.request.query.tostring' => 
   array (
-    'name' => 'App\\Request\\Query::__toString',
+    'name' => 'BearFramework\\App\\Request\\Query::__toString',
     'type' => 'method',
     'description' => 'Returns the full query string',
   ),
-  'app.request.set' => 
+  'bearframework.app.request.set' => 
   array (
-    'name' => 'App\\Request::__set',
+    'name' => 'BearFramework\\App\\Request::__set',
     'type' => 'method',
     'description' => 'Magic method',
   ),
-  'app.request.tostring' => 
+  'bearframework.app.request.tostring' => 
   array (
-    'name' => 'App\\Request::__toString',
+    'name' => 'BearFramework\\App\\Request::__toString',
     'type' => 'method',
     'description' => 'Returns the full URL of the request',
   ),
-  'app.respond' => 
+  'bearframework.app.respond' => 
   array (
-    'name' => 'App::respond',
+    'name' => 'BearFramework\\App::respond',
     'type' => 'method',
     'description' => 'Outputs a response',
   ),
-  'app.response' => 
+  'bearframework.app.response' => 
   array (
-    'name' => 'App\\Response',
+    'name' => 'BearFramework\\App\\Response',
     'type' => 'class',
     'description' => 'Response object',
   ),
-  'app.response.construct' => 
+  'bearframework.app.response.construct' => 
   array (
-    'name' => 'App\\Response::__construct',
+    'name' => 'BearFramework\\App\\Response::__construct',
     'type' => 'method',
     'description' => 'The constructor',
   ),
-  'app.response.filereader' => 
+  'bearframework.app.response.filereader' => 
   array (
-    'name' => 'App\\Response\\FileReader',
+    'name' => 'BearFramework\\App\\Response\\FileReader',
     'type' => 'class',
     'description' => 'Response type that reads file and outputs it',
   ),
-  'app.response.filereader.construct' => 
+  'bearframework.app.response.filereader.construct' => 
   array (
-    'name' => 'App\\Response\\FileReader::__construct',
+    'name' => 'BearFramework\\App\\Response\\FileReader::__construct',
     'type' => 'method',
     'description' => 'The constructor ',
   ),
-  'app.response.filereader.setcontenttype' => 
+  'bearframework.app.response.filereader.setcontenttype' => 
   array (
-    'name' => 'App\\Response\\FileReader::setContentType',
+    'name' => 'BearFramework\\App\\Response\\FileReader::setContentType',
     'type' => 'method',
     'description' => 'Sets the value of the content type header',
   ),
-  'app.response.filereader.setmaxage' => 
+  'bearframework.app.response.filereader.setmaxage' => 
   array (
-    'name' => 'App\\Response\\FileReader::setMaxAge',
+    'name' => 'BearFramework\\App\\Response\\FileReader::setMaxAge',
     'type' => 'method',
     'description' => 'Sets the max age attribute of the cache-control header',
   ),
-  'app.response.filereader.setstatuscode' => 
+  'bearframework.app.response.filereader.setstatuscode' => 
   array (
-    'name' => 'App\\Response\\FileReader::setStatusCode',
+    'name' => 'BearFramework\\App\\Response\\FileReader::setStatusCode',
     'type' => 'method',
     'description' => 'Sets the status code of the response header',
   ),
-  'app.response.html' => 
+  'bearframework.app.response.html' => 
   array (
-    'name' => 'App\\Response\\HTML',
+    'name' => 'BearFramework\\App\\Response\\HTML',
     'type' => 'class',
     'description' => 'Response type that outputs HTML code. The appropriate content type is set.',
   ),
-  'app.response.html.construct' => 
+  'bearframework.app.response.html.construct' => 
   array (
-    'name' => 'App\\Response\\HTML::__construct',
+    'name' => 'BearFramework\\App\\Response\\HTML::__construct',
     'type' => 'method',
     'description' => 'The constructor',
   ),
-  'app.response.html.setcontenttype' => 
+  'bearframework.app.response.html.setcontenttype' => 
   array (
-    'name' => 'App\\Response\\HTML::setContentType',
+    'name' => 'BearFramework\\App\\Response\\HTML::setContentType',
     'type' => 'method',
     'description' => 'Sets the value of the content type header',
   ),
-  'app.response.html.setmaxage' => 
+  'bearframework.app.response.html.setmaxage' => 
   array (
-    'name' => 'App\\Response\\HTML::setMaxAge',
+    'name' => 'BearFramework\\App\\Response\\HTML::setMaxAge',
     'type' => 'method',
     'description' => 'Sets the max age attribute of the cache-control header',
   ),
-  'app.response.html.setstatuscode' => 
+  'bearframework.app.response.html.setstatuscode' => 
   array (
-    'name' => 'App\\Response\\HTML::setStatusCode',
+    'name' => 'BearFramework\\App\\Response\\HTML::setStatusCode',
     'type' => 'method',
     'description' => 'Sets the status code of the response header',
   ),
-  'app.response.json' => 
+  'bearframework.app.response.json' => 
   array (
-    'name' => 'App\\Response\\JSON',
+    'name' => 'BearFramework\\App\\Response\\JSON',
     'type' => 'class',
     'description' => 'Response type that outputs JSON code. The appropriate content type is set.',
   ),
-  'app.response.json.construct' => 
+  'bearframework.app.response.json.construct' => 
   array (
-    'name' => 'App\\Response\\JSON::__construct',
+    'name' => 'BearFramework\\App\\Response\\JSON::__construct',
     'type' => 'method',
     'description' => 'The constructor',
   ),
-  'app.response.json.setcontenttype' => 
+  'bearframework.app.response.json.setcontenttype' => 
   array (
-    'name' => 'App\\Response\\JSON::setContentType',
+    'name' => 'BearFramework\\App\\Response\\JSON::setContentType',
     'type' => 'method',
     'description' => 'Sets the value of the content type header',
   ),
-  'app.response.json.setmaxage' => 
+  'bearframework.app.response.json.setmaxage' => 
   array (
-    'name' => 'App\\Response\\JSON::setMaxAge',
+    'name' => 'BearFramework\\App\\Response\\JSON::setMaxAge',
     'type' => 'method',
     'description' => 'Sets the max age attribute of the cache-control header',
   ),
-  'app.response.json.setstatuscode' => 
+  'bearframework.app.response.json.setstatuscode' => 
   array (
-    'name' => 'App\\Response\\JSON::setStatusCode',
+    'name' => 'BearFramework\\App\\Response\\JSON::setStatusCode',
     'type' => 'method',
     'description' => 'Sets the status code of the response header',
   ),
-  'app.response.notfound' => 
+  'bearframework.app.response.notfound' => 
   array (
-    'name' => 'App\\Response\\NotFound',
+    'name' => 'BearFramework\\App\\Response\\NotFound',
     'type' => 'class',
     'description' => 'Response type that sends Not Found status',
   ),
-  'app.response.notfound.construct' => 
+  'bearframework.app.response.notfound.construct' => 
   array (
-    'name' => 'App\\Response\\NotFound::__construct',
+    'name' => 'BearFramework\\App\\Response\\NotFound::__construct',
     'type' => 'method',
     'description' => 'The constructor',
   ),
-  'app.response.notfound.setcontenttype' => 
+  'bearframework.app.response.notfound.setcontenttype' => 
   array (
-    'name' => 'App\\Response\\NotFound::setContentType',
+    'name' => 'BearFramework\\App\\Response\\NotFound::setContentType',
     'type' => 'method',
     'description' => 'Sets the value of the content type header',
   ),
-  'app.response.notfound.setmaxage' => 
+  'bearframework.app.response.notfound.setmaxage' => 
   array (
-    'name' => 'App\\Response\\NotFound::setMaxAge',
+    'name' => 'BearFramework\\App\\Response\\NotFound::setMaxAge',
     'type' => 'method',
     'description' => 'Sets the max age attribute of the cache-control header',
   ),
-  'app.response.notfound.setstatuscode' => 
+  'bearframework.app.response.notfound.setstatuscode' => 
   array (
-    'name' => 'App\\Response\\NotFound::setStatusCode',
+    'name' => 'BearFramework\\App\\Response\\NotFound::setStatusCode',
     'type' => 'method',
     'description' => 'Sets the status code of the response header',
   ),
-  'app.response.permanentredirect' => 
+  'bearframework.app.response.permanentredirect' => 
   array (
-    'name' => 'App\\Response\\PermanentRedirect',
+    'name' => 'BearFramework\\App\\Response\\PermanentRedirect',
     'type' => 'class',
     'description' => 'Response type that makes permanent redirect',
   ),
-  'app.response.permanentredirect.construct' => 
+  'bearframework.app.response.permanentredirect.construct' => 
   array (
-    'name' => 'App\\Response\\PermanentRedirect::__construct',
+    'name' => 'BearFramework\\App\\Response\\PermanentRedirect::__construct',
     'type' => 'method',
     'description' => 'The constructor',
   ),
-  'app.response.permanentredirect.setcontenttype' => 
+  'bearframework.app.response.permanentredirect.setcontenttype' => 
   array (
-    'name' => 'App\\Response\\PermanentRedirect::setContentType',
+    'name' => 'BearFramework\\App\\Response\\PermanentRedirect::setContentType',
     'type' => 'method',
     'description' => 'Sets the value of the content type header',
   ),
-  'app.response.permanentredirect.setmaxage' => 
+  'bearframework.app.response.permanentredirect.setmaxage' => 
   array (
-    'name' => 'App\\Response\\PermanentRedirect::setMaxAge',
+    'name' => 'BearFramework\\App\\Response\\PermanentRedirect::setMaxAge',
     'type' => 'method',
     'description' => 'Sets the max age attribute of the cache-control header',
   ),
-  'app.response.permanentredirect.setstatuscode' => 
+  'bearframework.app.response.permanentredirect.setstatuscode' => 
   array (
-    'name' => 'App\\Response\\PermanentRedirect::setStatusCode',
+    'name' => 'BearFramework\\App\\Response\\PermanentRedirect::setStatusCode',
     'type' => 'method',
     'description' => 'Sets the status code of the response header',
   ),
-  'app.response.setcontenttype' => 
+  'bearframework.app.response.setcontenttype' => 
   array (
-    'name' => 'App\\Response::setContentType',
+    'name' => 'BearFramework\\App\\Response::setContentType',
     'type' => 'method',
     'description' => 'Sets the value of the content type header',
   ),
-  'app.response.setmaxage' => 
+  'bearframework.app.response.setmaxage' => 
   array (
-    'name' => 'App\\Response::setMaxAge',
+    'name' => 'BearFramework\\App\\Response::setMaxAge',
     'type' => 'method',
     'description' => 'Sets the max age attribute of the cache-control header',
   ),
-  'app.response.setstatuscode' => 
+  'bearframework.app.response.setstatuscode' => 
   array (
-    'name' => 'App\\Response::setStatusCode',
+    'name' => 'BearFramework\\App\\Response::setStatusCode',
     'type' => 'method',
     'description' => 'Sets the status code of the response header',
   ),
-  'app.response.temporaryredirect' => 
+  'bearframework.app.response.temporaryredirect' => 
   array (
-    'name' => 'App\\Response\\TemporaryRedirect',
+    'name' => 'BearFramework\\App\\Response\\TemporaryRedirect',
     'type' => 'class',
     'description' => 'Response type that makes temporary redirect',
   ),
-  'app.response.temporaryredirect.construct' => 
+  'bearframework.app.response.temporaryredirect.construct' => 
   array (
-    'name' => 'App\\Response\\TemporaryRedirect::__construct',
+    'name' => 'BearFramework\\App\\Response\\TemporaryRedirect::__construct',
     'type' => 'method',
     'description' => 'The constructor',
   ),
-  'app.response.temporaryredirect.setcontenttype' => 
+  'bearframework.app.response.temporaryredirect.setcontenttype' => 
   array (
-    'name' => 'App\\Response\\TemporaryRedirect::setContentType',
+    'name' => 'BearFramework\\App\\Response\\TemporaryRedirect::setContentType',
     'type' => 'method',
     'description' => 'Sets the value of the content type header',
   ),
-  'app.response.temporaryredirect.setmaxage' => 
+  'bearframework.app.response.temporaryredirect.setmaxage' => 
   array (
-    'name' => 'App\\Response\\TemporaryRedirect::setMaxAge',
+    'name' => 'BearFramework\\App\\Response\\TemporaryRedirect::setMaxAge',
     'type' => 'method',
     'description' => 'Sets the max age attribute of the cache-control header',
   ),
-  'app.response.temporaryredirect.setstatuscode' => 
+  'bearframework.app.response.temporaryredirect.setstatuscode' => 
   array (
-    'name' => 'App\\Response\\TemporaryRedirect::setStatusCode',
+    'name' => 'BearFramework\\App\\Response\\TemporaryRedirect::setStatusCode',
     'type' => 'method',
     'description' => 'Sets the status code of the response header',
   ),
-  'app.response.temporaryunavailable' => 
+  'bearframework.app.response.temporaryunavailable' => 
   array (
-    'name' => 'App\\Response\\TemporaryUnavailable',
+    'name' => 'BearFramework\\App\\Response\\TemporaryUnavailable',
     'type' => 'class',
     'description' => 'Response type that sends Temporary Unavailable status',
   ),
-  'app.response.temporaryunavailable.construct' => 
+  'bearframework.app.response.temporaryunavailable.construct' => 
   array (
-    'name' => 'App\\Response\\TemporaryUnavailable::__construct',
+    'name' => 'BearFramework\\App\\Response\\TemporaryUnavailable::__construct',
     'type' => 'method',
     'description' => 'The constructor',
   ),
-  'app.response.temporaryunavailable.setcontenttype' => 
+  'bearframework.app.response.temporaryunavailable.setcontenttype' => 
   array (
-    'name' => 'App\\Response\\TemporaryUnavailable::setContentType',
+    'name' => 'BearFramework\\App\\Response\\TemporaryUnavailable::setContentType',
     'type' => 'method',
     'description' => 'Sets the value of the content type header',
   ),
-  'app.response.temporaryunavailable.setmaxage' => 
+  'bearframework.app.response.temporaryunavailable.setmaxage' => 
   array (
-    'name' => 'App\\Response\\TemporaryUnavailable::setMaxAge',
+    'name' => 'BearFramework\\App\\Response\\TemporaryUnavailable::setMaxAge',
     'type' => 'method',
     'description' => 'Sets the max age attribute of the cache-control header',
   ),
-  'app.response.temporaryunavailable.setstatuscode' => 
+  'bearframework.app.response.temporaryunavailable.setstatuscode' => 
   array (
-    'name' => 'App\\Response\\TemporaryUnavailable::setStatusCode',
+    'name' => 'BearFramework\\App\\Response\\TemporaryUnavailable::setStatusCode',
     'type' => 'method',
     'description' => 'Sets the status code of the response header',
   ),
-  'app.response.text' => 
+  'bearframework.app.response.text' => 
   array (
-    'name' => 'App\\Response\\Text',
+    'name' => 'BearFramework\\App\\Response\\Text',
     'type' => 'class',
     'description' => 'Response type that outputs text. The appropriate content type is set.',
   ),
-  'app.response.text.construct' => 
+  'bearframework.app.response.text.construct' => 
   array (
-    'name' => 'App\\Response\\Text::__construct',
+    'name' => 'BearFramework\\App\\Response\\Text::__construct',
     'type' => 'method',
     'description' => 'The constructor',
   ),
-  'app.response.text.setcontenttype' => 
+  'bearframework.app.response.text.setcontenttype' => 
   array (
-    'name' => 'App\\Response\\Text::setContentType',
+    'name' => 'BearFramework\\App\\Response\\Text::setContentType',
     'type' => 'method',
     'description' => 'Sets the value of the content type header',
   ),
-  'app.response.text.setmaxage' => 
+  'bearframework.app.response.text.setmaxage' => 
   array (
-    'name' => 'App\\Response\\Text::setMaxAge',
+    'name' => 'BearFramework\\App\\Response\\Text::setMaxAge',
     'type' => 'method',
     'description' => 'Sets the max age attribute of the cache-control header',
   ),
-  'app.response.text.setstatuscode' => 
+  'bearframework.app.response.text.setstatuscode' => 
   array (
-    'name' => 'App\\Response\\Text::setStatusCode',
+    'name' => 'BearFramework\\App\\Response\\Text::setStatusCode',
     'type' => 'method',
     'description' => 'Sets the status code of the response header',
   ),
-  'app.routes' => 
+  'bearframework.app.routes' => 
   array (
-    'name' => 'App\\Routes',
+    'name' => 'BearFramework\\App\\Routes',
     'type' => 'class',
     'description' => 'Provides functionality for registering callbacks for specific requests and executing them',
   ),
-  'app.routes.add' => 
+  'bearframework.app.routes.add' => 
   array (
-    'name' => 'App\\Routes::add',
+    'name' => 'BearFramework\\App\\Routes::add',
     'type' => 'method',
     'description' => 'Registers a request handler',
   ),
-  'app.routes.getresponse' => 
+  'bearframework.app.routes.getresponse' => 
   array (
-    'name' => 'App\\Routes::getResponse',
+    'name' => 'BearFramework\\App\\Routes::getResponse',
     'type' => 'method',
     'description' => 'Finds the matching callback and returns its result',
   ),
-  'app.run' => 
+  'bearframework.app.run' => 
   array (
-    'name' => 'App::run',
+    'name' => 'BearFramework\\App::run',
     'type' => 'method',
     'description' => 'Call this method to start the application. This method outputs the response.',
   ),
-  'app.utilities.dir' => 
+  'bearframework.app.utilities.dir' => 
   array (
-    'name' => 'App\\Utilities\\Dir',
+    'name' => 'BearFramework\\App\\Utilities\\Dir',
     'type' => 'class',
     'description' => 'Directory utilities',
   ),
-  'app.utilities.dir.make' => 
+  'bearframework.app.utilities.dir.make' => 
   array (
-    'name' => 'App\\Utilities\\Dir::make',
+    'name' => 'BearFramework\\App\\Utilities\\Dir::make',
     'type' => 'method',
     'description' => 'Creates a dir if it\'s missing',
   ),
-  'app.utilities.file' => 
+  'bearframework.app.utilities.file' => 
   array (
-    'name' => 'App\\Utilities\\File',
+    'name' => 'BearFramework\\App\\Utilities\\File',
     'type' => 'class',
     'description' => 'File utilities',
   ),
-  'app.utilities.file.makedir' => 
+  'bearframework.app.utilities.file.makedir' => 
   array (
-    'name' => 'App\\Utilities\\File::makeDir',
+    'name' => 'BearFramework\\App\\Utilities\\File::makeDir',
     'type' => 'method',
     'description' => 'Creates the dir of the filename specified if it\'s missing',
   ),
-  'app.utilities.graphics' => 
+  'bearframework.app.utilities.graphics' => 
   array (
-    'name' => 'App\\Utilities\\Graphics',
+    'name' => 'BearFramework\\App\\Utilities\\Graphics',
     'type' => 'class',
     'description' => 'Graphics utilities',
   ),
-  'app.utilities.graphics.getsize' => 
+  'bearframework.app.utilities.graphics.getsize' => 
   array (
-    'name' => 'App\\Utilities\\Graphics::getSize',
+    'name' => 'BearFramework\\App\\Utilities\\Graphics::getSize',
     'type' => 'method',
     'description' => 'Returns the size of the image specified',
   ),
-  'app.utilities.graphics.resize' => 
+  'bearframework.app.utilities.graphics.resize' => 
   array (
-    'name' => 'App\\Utilities\\Graphics::resize',
+    'name' => 'BearFramework\\App\\Utilities\\Graphics::resize',
     'type' => 'method',
     'description' => 'Resizes a image file',
   ),
-  'app.wakeup' => 
+  'bearframework.app.wakeup' => 
   array (
-    'name' => 'App::__wakeup',
+    'name' => 'BearFramework\\App::__wakeup',
     'type' => 'method',
     'description' => 'Prevents multiple app instances',
   ),

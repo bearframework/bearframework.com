@@ -1,5 +1,7 @@
 <?php
 
+use BearFramework\App;
+
 class Data
 {
 
@@ -43,11 +45,6 @@ class Data
             'name' => 'Assets',
             'file' => 'assets.php',
             'description' => 'Image resizing and static files delivery are piece of cake.'
-        ],
-        'html-components' => [
-            'name' => 'HTML components',
-            'file' => 'htmlComponents.php',
-            'description' => 'It\' like template engine, but way more familiar.'
         ],
         'cache' => [
             'name' => 'Cache',

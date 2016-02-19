@@ -1,10 +1,25 @@
 <?php
 
+use BearFramework\App;
+
 if ($app->config->environment === 'production') {
     // The website is behind CDN, so we must update the request data
     $app->request->scheme = 'https';
     $app->request->host = 'bearframework.com';
 }
+
+// Add HTML Server Components addon
+$app->addons->add(__DIR__ . '/../vendor/ivopetkov/html-server-components-bearframework-addon');
+
+// Add Google Analytics addon
+if ($app->config->environment === 'production') {
+    $app->addons->add(__DIR__ . '/../vendor/ivopetkov/google-analytics-bearframework-addon', [
+        'trackingID' => 'UA-65160757-3'
+    ]);
+}
+
+// Makes this dir publicly accessible
+$context->assets->addDir('assets/');
 
 // Register some classes for autoloading
 $context->classes->add('Data', 'classes/Data.php');
@@ -78,16 +93,16 @@ $app->routes->add('/assets/socialimage', function() use ($context) {
 // Update the response
 $app->hooks->add('responseCreated', function($response) use ($app, $context) {
     $addTemplate = false;
-    if ($response instanceof \App\Response\NotFound) {
+    if ($response instanceof App\Response\NotFound) {
         $response->setContentType('text/html');
         $response->content = '<component src="file:' . $context->dir . 'components/systempage.php" text="Page not found" />';
         $addTemplate = true;
-    } elseif ($response instanceof \App\Response\TemporaryUnavailable) {
+    } elseif ($response instanceof App\Response\TemporaryUnavailable) {
         $response->setContentType('text/html');
         $response->content = '<component src="file:' . $context->dir . 'components/systempage.php" text="Temporary unavailable. Try again in few moments." />';
         $addTemplate = true;
     }
-    if ($addTemplate || $response instanceof \App\Response\HTML) {
+    if ($addTemplate || $response instanceof App\Response\HTML) {
         $templateContent = $app->components->process('<component src="file:' . $context->dir . 'components/template.php" />');
         $templateContent = str_replace('{pageContent}', $response->content, $templateContent);
         $response->content = $templateContent;
@@ -97,9 +112,3 @@ $app->hooks->add('responseCreated', function($response) use ($app, $context) {
     }
 });
 
-// Adds Google Analytics
-if ($app->config->environment === 'production') {
-    $app->addons->add('ivopetkov/bearframework-google-analytics', [
-        'trackingID' => 'UA-65160757-3'
-    ]);
-}

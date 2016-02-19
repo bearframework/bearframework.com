@@ -1,7 +1,7 @@
 <html>
     <body>
         <p>
-            The purpose of websites is to respond to requests (home page, subpage, assets) and routing in Bear Framework makes this very easy. When you create your app, you can describe different request handlers for different request types. Here is how you can register a callback function that will be called if there is a match with the request parameters. The response object (<a href="<?= $app->getUrl('/documentation/api/app.response/') ?>">App\Response</a>) returned by the callback will be sent to the client.
+            The purpose of websites is to respond to requests (home page, subpage, assets) and routing in Bear Framework makes this very easy. When you create your app, you can describe different request handlers for different request types. Here is how you can register a callback function that will be called if there is a match with the request parameters. The response object (<a href="<?= $app->getUrl('/documentation/api/bearframework.app.response/') ?>">BearFramework\App\Response</a>) returned by the callback will be sent to the client.
         </p>
     <component src="code"><?= "// The specified callback will be executed when request path is '/' and response method is GET
 // The text 'Hi' will be shown on the screen
@@ -9,7 +9,7 @@
     return new App\Response('Hi');
 });" ?></component>
     <p>
-        Routes are checked from top to bottom. If a matching route does not return an object of type <a href="<?= $app->getUrl('/documentation/api/app.response/') ?>">App\Response</a>, the following routes will be checked too. If there is no match, the framework will respond with an object of type <a href="<?= $app->getUrl('/documentation/api/app.response.notfound/') ?>">App\Response\NotFound</a>.<br><br/>
+        Routes are checked from top to bottom. If a matching route does not return an object of type <a href="<?= $app->getUrl('/documentation/api/bearframework.app.response/') ?>">BearFramework\App\Response</a>, the following routes will be checked too. If there is no match, the framework will respond with an object of type <a href="<?= $app->getUrl('/documentation/api/bearframework.app.response.notfound/') ?>">BearFramework\App\Response\NotFound</a>.<br><br/>
     </p>
     <h2>Patterns</h2>
     <p>
@@ -23,7 +23,7 @@
 });
 " ?></component>
     <h2>API</h2>
-    <component src="apiList" prefix="App\Routes"/>
+    <component src="apiList" prefix="BearFramework\App\Routes"/>
     <h2>Examples</h2>
     <p>
         Simple paths matching

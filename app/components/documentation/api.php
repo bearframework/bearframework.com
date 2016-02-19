@@ -5,13 +5,12 @@
 \$app
     -&gt;config
         -&gt;appDir
-        -&gt;addonsDir
         -&gt;dataDir
         -&gt;logsDir
+        -&gt;updateEnvironment
         -&gt;handleErrors
         -&gt;displayErrors
         -&gt;logErrors
-        -&gt;errorLogFilename
         -&gt;assetsPathPrefix
         -&gt;assetsMaxAge
     -&gt;request
@@ -23,18 +22,16 @@
         -&gt;query
     -&gt;routes
         -&gt;add ( string|string[] \$pattern , callable \$callback [, array \$options = [&quot;GET&quot;] ] )
-    -&gt;log
-        -&gt;write ( string \$filename , string \$data )
-    -&gt;components
-        -&gt;addAlias ( string \$alias , string \$original )
-        -&gt;insertHTML ( string \$target , string \$html [, string \$position = 'beforeBodyEnd' ] )
+    -&gt;logger
+        -&gt;log ( mixed \$level , string \$message [, array \$context = [] )
     -&gt;addons
-        -&gt;add ( string \$id [, array \$options = [] ] )
-        -&gt;getOptions ( string \$id )
+        -&gt;add ( string \$pathname [, array \$options = [] ] )
+        -&gt;getList ( void )
     -&gt;hooks
         -&gt;add ( string \$name , callable \$callback )
         -&gt;execute ( string \$name )
     -&gt;assets
+        -&gt;addDir ( string \$pathname )
         -&gt;getUrl ( string \$filename [, array \$options = [] ] )
     -&gt;data
         -&gt;get ( array \$parameters )
@@ -50,24 +47,32 @@
         -&gt;getFilename ( string \$key )
     -&gt;cache
         -&gt;get ( string \$key [, string \$defaultValue = false ] )
-        -&gt;exists ( mixed \$key )
         -&gt;set ( mixed \$key , mixed \$value [, int \$ttl = 0 ] )
         -&gt;delete ( mixed \$key )
     -&gt;classes
         -&gt;add ( string \$class , string \$filename )
+        -&gt;load ( string \$class )
+    -&gt;container
+        -&gt;add ( string \$name , string|object|callable \$value [, array \$options = [] ] )
+        -&gt;get ( string \$name )
+        -&gt;has ( string \$name )
+    -&gt;initialize ( void )
     -&gt;load ( string \$filename )
+    -&gt;getContext ( string \$filename )
     -&gt;getUrl ( [ string \$path = '/' ] )
     -&gt;run ( void )
+    -&gt;respond ( \BearFramework\App\Response \$response )
         " ?></component>
+    <p>The following object makes developing addons and your application exactly the same. It provides information about the app or addon directory and provides shortcuts to other directory dependant methods.</p>
     <component src="code"><?= "
 \$context
     -&gt;dir
+    -&gt;options // only for addons
     -&gt;assets
         -&gt;getUrl ( string \$filename [, array \$options = [] ] )
     -&gt;classes
         -&gt;add ( string \$class , string \$filename )
     -&gt;load ( string \$filename )
-    -&gt;getOptions ( void ) // only for addons
         " ?></component>
     <h2>Class definitions</h2>
     <component src="apiList" type="class"/>

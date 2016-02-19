@@ -4,7 +4,6 @@
             Here is a recommended file structure and configation for your web app.
         </p>
     <component src="code"><?= "\\app // This is the place where we write our app code
-\\addons // Addons dir (You can change it with \\vendor if you are using Composer)
 \\bearframework // Bear Framework files
     \\autoload.php
     \\...
@@ -21,20 +20,20 @@
 require 'vendor/autoload.php';
 
 // Let's create the application object that will handle the request
-\$app = new App([
-    'appDir' => __DIR__ . '/../app/', // The dir where our app code is located
-    'addonsDir' => __DIR__ . '/../addons/', // The dir where the addons are located
-    'dataDir' => __DIR__ . '/../data/', // This is data storage dir
-    'logsDir' => __DIR__ . '/../logs/', // Here logs are stored
-    'logErrors' => true
-]);
+\$app = new BearFramework\App();
+\$app->config->appDir = __DIR__ . '/../app/'; // The dir where our app code is located
+\$app->config->dataDir = __DIR__ . '/../data/'; // This is data storage dir
+\$app->config->logsDir = __DIR__ . '/../logs/'; // Here logs are stored
+\$app->config->logErrors = true;
 
 // Executes the app and sends response
 \$app-&gt;run();" ?></component>
     <p>
         And this is the content of \app\index.php. It is autoloaded because of the configuration variable 'appDir'. It's recommended to use appDir that is not publicly accessible to store your code and assets.
     </p>
-    <component src="code"><?= "// The specified callback will be executed when request path is '/' and response method is GET
+    <component src="code"><?= "
+use BearFramework\App;
+// The specified callback will be executed when request path is '/' and response method is GET
 // The text 'Hi' will be shown on the screen
 \$app-&gt;routes-&gt;add('/', function() {
     return new App\Response('Hi');

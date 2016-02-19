@@ -4,14 +4,14 @@
             Hooks are a great way to provide data or make some specific action when needed. They are identified by name, and you can attach a unlimited number of callbacks to be called (hooks). There are some build-it hooks, and you can define your own.
         </p>
         <h2>API</h2>
-        <component src="apiList" prefix="App\Hooks"/>
+        <component src="apiList" prefix="BearFramework\App\Hooks"/>
         <h2>Examples</h2>
         <p>
-            This function changes the response content if the response is of type <a href="<?= $app->getUrl('/documentation/api/app.response.notfound/') ?>">\App\Response\NotFound</a>.
+            This function changes the response content if the response is of type <a href="<?= $app->getUrl('/documentation/api/bearframework.app.response.notfound/') ?>">Bearframwork\App\Response\NotFound</a>.
         </p>
     <component src="code"><?= "
 \$app->hooks->add('responseCreated', function(\$response) {
-    if (\$response instanceof \App\Response\NotFound) {
+    if (\$response instanceof App\Response\NotFound) {
         \$response->content = 'Sorry!';
     }
 });

@@ -5,18 +5,16 @@
             Here is a recommended configuration:
         </p>
     <component src="code"><?= "
-\$app = new App([
-    'appDir' =&gt; __DIR__ . '/../app/',
-    'addonsDir' =&gt; __DIR__ . '/../addons/',
-    'dataDir' =&gt; __DIR__ . '/../data/',
-    'logsDir' =&gt; __DIR__ . '/../logs/',
-    'handleErrors' =&gt; true,
-    'displayErrors' =&gt; true, // only for development purposes
-    'logErrors' =&gt; true,
-    'assetsMaxAge' =&gt; 86400 // sets the max-age http header for all assets to 1 day
-]);
+\$app = new BearFramework\App();
+\$app->config->appDir = __DIR__ . '/../app/',
+\$app->config->dataDir = __DIR__ . '/../data/',
+\$app->config->logsDir = __DIR__ . '/../logs/',
+\$app->config->handleErrors = true,
+\$app->config->displayErrors = true, // only for development purposes
+\$app->config->logErrors = true,
+\$app->config->assetsMaxAge = 86400 // sets the max-age http header for all assets to 1 day
 " ?></component>
     <h2>API</h2>
-    <component src="apiList" prefix="App\Config"/>
+    <component src="apiList" prefix="BearFramework\App\Config"/>
 </body>
 </html>
