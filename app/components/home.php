@@ -21,6 +21,7 @@
     <component src="code"><?= "
 &lt;?php
 require 'vendor/autoload.php';
+use BearFramework\App;
 
 // Create the application object that will handle the request
 \$app = new App();
