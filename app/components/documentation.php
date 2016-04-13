@@ -2,7 +2,7 @@
 
 function renderLink($app, $code, $topic)
 {
-    echo '<a href="' . $app->getUrl('/documentation/' . $code . '/') . '">' . $topic['name'] . '</a> - ' . $topic['description'] . '<br/>';
+    echo '<a href="' . $app->urls->get('/documentation/' . $code . '/') . '">' . $topic['name'] . '</a> - ' . $topic['description'] . '<br/>';
 }
 ?><html>
     <body>
@@ -31,7 +31,7 @@ function renderLink($app, $code, $topic)
             $counter = 0;
             foreach (Data::$documentationTopics as $code => $topic) {
                 $counter++;
-                if ($counter < 2) {
+                if ($counter <= 2) {
                     continue;
                 }
                 renderLink($app, $code, $topic);

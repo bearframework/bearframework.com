@@ -1,6 +1,6 @@
 <?php
 return array (
-  'name' => 'load',
+  'name' => 'getSize',
   'parameters' => 
   array (
     0 => 
@@ -13,7 +13,7 @@ return array (
   ),
   'comment' => 
   array (
-    'description' => 'Loads a file from the current context dir',
+    'description' => 'Returns the size of the image specified',
     'type' => NULL,
     'parameters' => 
     array (
@@ -21,13 +21,13 @@ return array (
       array (
         'name' => 'filename',
         'type' => 'string',
-        'description' => 'The filename to be loaded',
+        'description' => 'The filename of the image',
       ),
     ),
     'return' => 
     array (
-      'type' => 'boolean',
-      'description' => NULL,
+      'type' => 'array[int,',
+      'description' => 'int] The size of the image specified',
     ),
     'exceptions' => 
     array (
@@ -43,5 +43,5 @@ return array (
   'isConstructor' => false,
   'isDestructor' => false,
   'type' => 'method',
-  'class' => 'BearFramework\\App\\Context',
+  'class' => 'BearFramework\\App\\Images',
 );

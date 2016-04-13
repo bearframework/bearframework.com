@@ -1,6 +1,6 @@
 <?php
 return array (
-  'name' => 'load',
+  'name' => 'makeFileDir',
   'parameters' => 
   array (
     0 => 
@@ -13,7 +13,7 @@ return array (
   ),
   'comment' => 
   array (
-    'description' => 'Loads a file from the current context dir',
+    'description' => 'Creates the dir for the filename specified if it\'s missing',
     'type' => NULL,
     'parameters' => 
     array (
@@ -21,17 +21,17 @@ return array (
       array (
         'name' => 'filename',
         'type' => 'string',
-        'description' => 'The filename to be loaded',
+        'description' => 'The filename',
       ),
     ),
     'return' => 
     array (
-      'type' => 'boolean',
-      'description' => NULL,
+      'type' => 'void',
+      'description' => 'No value is returned',
     ),
     'exceptions' => 
     array (
-      0 => '\\InvalidArgumentException',
+      0 => '\\Exception',
     ),
   ),
   'isPrivate' => false,
@@ -43,5 +43,5 @@ return array (
   'isConstructor' => false,
   'isDestructor' => false,
   'type' => 'method',
-  'class' => 'BearFramework\\App\\AddonContext',
+  'class' => 'BearFramework\\App\\Filesystem',
 );

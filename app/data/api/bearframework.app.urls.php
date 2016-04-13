@@ -1,10 +1,10 @@
 <?php
 return array (
-  'name' => 'BearFramework\\App\\Utilities\\File',
-  'namespace' => 'BearFramework\\App\\Utilities',
+  'name' => 'BearFramework\\App\\Urls',
+  'namespace' => 'BearFramework\\App',
   'comment' => 
   array (
-    'description' => 'File utilities',
+    'description' => 'URLs utilities',
     'type' => NULL,
     'parameters' => 
     array (
@@ -24,44 +24,44 @@ return array (
   array (
     0 => 
     array (
-      'name' => 'makeDir',
+      'name' => 'get',
       'parameters' => 
       array (
         0 => 
         array (
-          'name' => 'filename',
-          'value' => NULL,
+          'name' => 'path',
+          'value' => '/',
           'type' => 'string',
-          'isOptional' => false,
+          'isOptional' => true,
         ),
       ),
       'comment' => 
       array (
-        'description' => 'Creates the dir of the filename specified if it\'s missing',
+        'description' => 'Constructs a url for the path specified',
         'type' => NULL,
         'parameters' => 
         array (
           0 => 
           array (
-            'name' => 'filename',
+            'name' => 'path',
             'type' => 'string',
-            'description' => 'The filename',
+            'description' => 'The path',
           ),
         ),
         'return' => 
         array (
-          'type' => 'void',
-          'description' => 'No value is returned',
+          'type' => 'string',
+          'description' => 'Absolute URL containing the base URL plus the path given',
         ),
         'exceptions' => 
         array (
-          0 => '\\Exception',
+          0 => '\\InvalidArgumentException',
         ),
       ),
       'isPrivate' => false,
       'isProtected' => false,
       'isPublic' => true,
-      'isStatic' => true,
+      'isStatic' => false,
       'isAbstract' => false,
       'isFinal' => false,
       'isConstructor' => false,

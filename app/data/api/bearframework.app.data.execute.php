@@ -1,47 +1,46 @@
 <?php
 return array (
-  'name' => 'make',
+  'name' => 'execute',
   'parameters' => 
   array (
     0 => 
     array (
-      'name' => 'pathname',
+      'name' => 'commands',
       'value' => NULL,
-      'type' => 'string',
+      'type' => 'array',
       'isOptional' => false,
     ),
   ),
   'comment' => 
   array (
-    'description' => 'Creates a dir if it\'s missing',
+    'description' => 'Executes multiple commands',
     'type' => NULL,
     'parameters' => 
     array (
       0 => 
       array (
-        'name' => 'pathname',
-        'type' => 'string',
-        'description' => 'The pathname of the dir',
+        'name' => 'commands',
+        'type' => 'array',
+        'description' => 'Commands',
       ),
     ),
     'return' => 
     array (
-      'type' => 'void',
-      'description' => 'No value is returned',
+      'type' => 'array',
+      'description' => 'List of commands results',
     ),
     'exceptions' => 
     array (
-      0 => '\\Exception',
     ),
   ),
   'isPrivate' => false,
   'isProtected' => false,
   'isPublic' => true,
-  'isStatic' => true,
+  'isStatic' => false,
   'isAbstract' => false,
   'isFinal' => false,
   'isConstructor' => false,
   'isDestructor' => false,
   'type' => 'method',
-  'class' => 'BearFramework\\App\\Utilities\\Dir',
+  'class' => 'BearFramework\\App\\Data',
 );

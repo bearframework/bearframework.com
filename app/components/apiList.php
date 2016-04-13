@@ -11,7 +11,7 @@
                 if (isset($type{0}) && $endpoint['type'] !== $type) {
                     continue;
                 }
-                echo '<a href="' . $app->getUrl('/documentation/api/' . $code . '/') . '">' . $endpoint['name'] . '</a>' . (strlen($endpoint['description']) > 0 ? ' - ' . $endpoint['description'] : '') . '<br/>';
+                echo '<a href="' . $app->urls->get('/documentation/api/' . $code . '/') . '">' . $endpoint['name'] . '</a>' . (strlen($endpoint['description']) > 0 ? ' - ' . $endpoint['description'] : '') . '<br/>';
             }
             ?></p>
     </body>

@@ -1,6 +1,6 @@
 {
     "require": {
-        "bearframework/bearframework": "*",
+        "bearframework/bearframework": "0.8.*",
         "ivopetkov/google-analytics-bearframework-addon": "*",
         "ivopetkov/html-server-components-bearframework-addon": "*"
     }

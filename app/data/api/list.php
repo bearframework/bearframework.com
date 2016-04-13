@@ -1,5 +1,41 @@
 <?php
 return array (
+  'bearframework.addons' => 
+  array (
+    'name' => 'BearFramework\\Addons',
+    'type' => 'class',
+    'description' => 'Place to register addons that can be enabled for the application',
+  ),
+  'bearframework.addons.exists' => 
+  array (
+    'name' => 'BearFramework\\Addons::exists',
+    'type' => 'method',
+    'description' => 'Checks whether addon is registered',
+  ),
+  'bearframework.addons.getdir' => 
+  array (
+    'name' => 'BearFramework\\Addons::getDir',
+    'type' => 'method',
+    'description' => 'Returns the addon dir',
+  ),
+  'bearframework.addons.getlist' => 
+  array (
+    'name' => 'BearFramework\\Addons::getList',
+    'type' => 'method',
+    'description' => 'Returns an array containing the names of all registered addons',
+  ),
+  'bearframework.addons.getoptions' => 
+  array (
+    'name' => 'BearFramework\\Addons::getOptions',
+    'type' => 'method',
+    'description' => 'Returns the addon options',
+  ),
+  'bearframework.addons.register' => 
+  array (
+    'name' => 'BearFramework\\Addons::register',
+    'type' => 'method',
+    'description' => 'Registers an addon',
+  ),
   'bearframework.app' => 
   array (
     'name' => 'BearFramework\\App',
@@ -17,12 +53,6 @@ return array (
     'name' => 'BearFramework\\App\\AddonContext::__construct',
     'type' => 'method',
     'description' => 'The constructor',
-  ),
-  'bearframework.app.addoncontext.load' => 
-  array (
-    'name' => 'BearFramework\\App\\AddonContext::load',
-    'type' => 'method',
-    'description' => 'Loads a file from the current context dir',
   ),
   'bearframework.app.addons' => 
   array (
@@ -53,12 +83,6 @@ return array (
     'name' => 'BearFramework\\App\\AppContext::__construct',
     'type' => 'method',
     'description' => 'The constructor',
-  ),
-  'bearframework.app.appcontext.load' => 
-  array (
-    'name' => 'BearFramework\\App\\AppContext::load',
-    'type' => 'method',
-    'description' => 'Loads a file from the current context dir',
   ),
   'bearframework.app.assets' => 
   array (
@@ -186,12 +210,6 @@ return array (
     'type' => 'class',
     'description' => 'Dependency Injection container',
   ),
-  'bearframework.app.container.add' => 
-  array (
-    'name' => 'BearFramework\\App\\Container::add',
-    'type' => 'method',
-    'description' => 'Registeres a value for the specified name',
-  ),
   'bearframework.app.container.get' => 
   array (
     'name' => 'BearFramework\\App\\Container::get',
@@ -203,6 +221,12 @@ return array (
     'name' => 'BearFramework\\App\\Container::has',
     'type' => 'method',
     'description' => 'Returns information about whether the service is added',
+  ),
+  'bearframework.app.container.set' => 
+  array (
+    'name' => 'BearFramework\\App\\Container::set',
+    'type' => 'method',
+    'description' => 'Registeres a value for the specified name',
   ),
   'bearframework.app.context' => 
   array (
@@ -258,12 +282,6 @@ return array (
     'type' => 'method',
     'description' => 'The constructor',
   ),
-  'bearframework.app.context.load' => 
-  array (
-    'name' => 'BearFramework\\App\\Context::load',
-    'type' => 'method',
-    'description' => 'Loads a file from the current context dir',
-  ),
   'bearframework.app.data' => 
   array (
     'name' => 'BearFramework\\App\\Data',
@@ -287,6 +305,12 @@ return array (
     'name' => 'BearFramework\\App\\Data::duplicate',
     'type' => 'method',
     'description' => 'Creates a copy of the object specified',
+  ),
+  'bearframework.app.data.execute' => 
+  array (
+    'name' => 'BearFramework\\App\\Data::execute',
+    'type' => 'method',
+    'description' => 'Executes multiple commands',
   ),
   'bearframework.app.data.get' => 
   array (
@@ -336,6 +360,24 @@ return array (
     'type' => 'method',
     'description' => 'Saves data',
   ),
+  'bearframework.app.filesystem' => 
+  array (
+    'name' => 'BearFramework\\App\\Filesystem',
+    'type' => 'class',
+    'description' => 'Filesystem utilities',
+  ),
+  'bearframework.app.filesystem.makedir' => 
+  array (
+    'name' => 'BearFramework\\App\\Filesystem::makeDir',
+    'type' => 'method',
+    'description' => 'Creates a dir if it\'s missing',
+  ),
+  'bearframework.app.filesystem.makefiledir' => 
+  array (
+    'name' => 'BearFramework\\App\\Filesystem::makeFileDir',
+    'type' => 'method',
+    'description' => 'Creates the dir for the filename specified if it\'s missing',
+  ),
   'bearframework.app.get' => 
   array (
     'name' => 'BearFramework\\App::__get',
@@ -347,12 +389,6 @@ return array (
     'name' => 'BearFramework\\App::getContext',
     'type' => 'method',
     'description' => 'Creates a context object for the filename specified',
-  ),
-  'bearframework.app.geturl' => 
-  array (
-    'name' => 'BearFramework\\App::getUrl',
-    'type' => 'method',
-    'description' => 'Constructs a url for the path specified',
   ),
   'bearframework.app.hooks' => 
   array (
@@ -371,6 +407,24 @@ return array (
     'name' => 'BearFramework\\App\\Hooks::execute',
     'type' => 'method',
     'description' => 'Triggers execution of all callbacks hooked to the name specified',
+  ),
+  'bearframework.app.images' => 
+  array (
+    'name' => 'BearFramework\\App\\Images',
+    'type' => 'class',
+    'description' => 'Images utilities',
+  ),
+  'bearframework.app.images.getsize' => 
+  array (
+    'name' => 'BearFramework\\App\\Images::getSize',
+    'type' => 'method',
+    'description' => 'Returns the size of the image specified',
+  ),
+  'bearframework.app.images.resize' => 
+  array (
+    'name' => 'BearFramework\\App\\Images::resize',
+    'type' => 'method',
+    'description' => 'Resizes a image file',
   ),
   'bearframework.app.initialize' => 
   array (
@@ -438,17 +492,17 @@ return array (
     'type' => 'method',
     'description' => '',
   ),
+  'bearframework.app.invalidconfigoptionexception.wakeup' => 
+  array (
+    'name' => 'BearFramework\\App\\InvalidConfigOptionException::__wakeup',
+    'type' => 'method',
+    'description' => '',
+  ),
   'bearframework.app.isset' => 
   array (
     'name' => 'BearFramework\\App::__isset',
     'type' => 'method',
     'description' => 'Returns information about whether the service is added in the dependency injection container',
-  ),
-  'bearframework.app.load' => 
-  array (
-    'name' => 'BearFramework\\App::load',
-    'type' => 'method',
-    'description' => 'Loads a file',
   ),
   'bearframework.app.logger' => 
   array (
@@ -882,47 +936,17 @@ return array (
     'type' => 'method',
     'description' => 'Call this method to start the application. This method outputs the response.',
   ),
-  'bearframework.app.utilities.dir' => 
+  'bearframework.app.urls' => 
   array (
-    'name' => 'BearFramework\\App\\Utilities\\Dir',
+    'name' => 'BearFramework\\App\\Urls',
     'type' => 'class',
-    'description' => 'Directory utilities',
+    'description' => 'URLs utilities',
   ),
-  'bearframework.app.utilities.dir.make' => 
+  'bearframework.app.urls.get' => 
   array (
-    'name' => 'BearFramework\\App\\Utilities\\Dir::make',
+    'name' => 'BearFramework\\App\\Urls::get',
     'type' => 'method',
-    'description' => 'Creates a dir if it\'s missing',
-  ),
-  'bearframework.app.utilities.file' => 
-  array (
-    'name' => 'BearFramework\\App\\Utilities\\File',
-    'type' => 'class',
-    'description' => 'File utilities',
-  ),
-  'bearframework.app.utilities.file.makedir' => 
-  array (
-    'name' => 'BearFramework\\App\\Utilities\\File::makeDir',
-    'type' => 'method',
-    'description' => 'Creates the dir of the filename specified if it\'s missing',
-  ),
-  'bearframework.app.utilities.graphics' => 
-  array (
-    'name' => 'BearFramework\\App\\Utilities\\Graphics',
-    'type' => 'class',
-    'description' => 'Graphics utilities',
-  ),
-  'bearframework.app.utilities.graphics.getsize' => 
-  array (
-    'name' => 'BearFramework\\App\\Utilities\\Graphics::getSize',
-    'type' => 'method',
-    'description' => 'Returns the size of the image specified',
-  ),
-  'bearframework.app.utilities.graphics.resize' => 
-  array (
-    'name' => 'BearFramework\\App\\Utilities\\Graphics::resize',
-    'type' => 'method',
-    'description' => 'Resizes a image file',
+    'description' => 'Constructs a url for the path specified',
   ),
   'bearframework.app.wakeup' => 
   array (

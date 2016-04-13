@@ -1,10 +1,10 @@
 <?php
 return array (
-  'name' => 'BearFramework\\App\\Utilities\\Graphics',
-  'namespace' => 'BearFramework\\App\\Utilities',
+  'name' => 'BearFramework\\App\\Images',
+  'namespace' => 'BearFramework\\App',
   'comment' => 
   array (
-    'description' => 'Graphics utilities',
+    'description' => 'Images utilities',
     'type' => NULL,
     'parameters' => 
     array (
@@ -29,7 +29,7 @@ return array (
       array (
         0 => 
         array (
-          'name' => 'sourceFilename',
+          'name' => 'filename',
           'value' => NULL,
           'type' => 'string',
           'isOptional' => false,
@@ -43,7 +43,7 @@ return array (
         array (
           0 => 
           array (
-            'name' => 'sourceFilename',
+            'name' => 'filename',
             'type' => 'string',
             'description' => 'The filename of the image',
           ),
@@ -61,7 +61,7 @@ return array (
       'isPrivate' => false,
       'isProtected' => false,
       'isPublic' => true,
-      'isStatic' => true,
+      'isStatic' => false,
       'isAbstract' => false,
       'isFinal' => false,
       'isConstructor' => false,
@@ -88,23 +88,11 @@ return array (
         ),
         2 => 
         array (
-          'name' => 'width',
-          'value' => NULL,
-          'type' => 'int',
-          'isOptional' => false,
-        ),
-        3 => 
-        array (
-          'name' => 'height',
-          'value' => NULL,
-          'type' => 'int',
-          'isOptional' => false,
-        ),
-        4 => 
-        array (
-          'name' => 'outputType',
-          'value' => NULL,
-          'type' => 'string',
+          'name' => 'options',
+          'value' => 
+          array (
+          ),
+          'type' => 'array',
           'isOptional' => true,
         ),
       ),
@@ -128,21 +116,9 @@ return array (
           ),
           2 => 
           array (
-            'name' => 'width',
-            'type' => 'int',
-            'description' => 'The width of the resized image',
-          ),
-          3 => 
-          array (
-            'name' => 'height',
-            'type' => 'int',
-            'description' => 'The height of the resized image',
-          ),
-          4 => 
-          array (
-            'name' => 'outputType',
-            'type' => 'string',
-            'description' => 'The output type of the resized image',
+            'name' => 'options',
+            'type' => 'array',
+            'description' => 'Resize options. You can resize the file by providing "width", "height" or both.',
           ),
         ),
         'return' => 
@@ -159,7 +135,7 @@ return array (
       'isPrivate' => false,
       'isProtected' => false,
       'isPublic' => true,
-      'isStatic' => true,
+      'isStatic' => false,
       'isAbstract' => false,
       'isFinal' => false,
       'isConstructor' => false,

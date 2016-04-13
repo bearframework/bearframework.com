@@ -1,11 +1,11 @@
 <?php
 return array (
-  'name' => 'makeDir',
+  'name' => 'getOptions',
   'parameters' => 
   array (
     0 => 
     array (
-      'name' => 'filename',
+      'name' => 'name',
       'value' => NULL,
       'type' => 'string',
       'isOptional' => false,
@@ -13,25 +13,26 @@ return array (
   ),
   'comment' => 
   array (
-    'description' => 'Creates the dir of the filename specified if it\'s missing',
+    'description' => 'Returns the addon options',
     'type' => NULL,
     'parameters' => 
     array (
       0 => 
       array (
-        'name' => 'filename',
+        'name' => 'name',
         'type' => 'string',
-        'description' => 'The filename',
+        'description' => 'The addon name',
       ),
     ),
     'return' => 
     array (
-      'type' => 'void',
-      'description' => 'No value is returned',
+      'type' => 'string',
+      'description' => 'The location of the addon',
     ),
     'exceptions' => 
     array (
       0 => '\\Exception',
+      1 => '\\InvalidArgumentException',
     ),
   ),
   'isPrivate' => false,
@@ -43,5 +44,5 @@ return array (
   'isConstructor' => false,
   'isDestructor' => false,
   'type' => 'method',
-  'class' => 'BearFramework\\App\\Utilities\\File',
+  'class' => 'BearFramework\\Addons',
 );

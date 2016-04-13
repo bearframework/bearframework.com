@@ -1,7 +1,7 @@
 <html>
     <body>
         <p>
-            <a href="<?= $app->getUrl('/documentation/routing/') ?>">Routing</a> can be very helpful. But sometimes you will need the full request data. The object <a href="<?= $app->getUrl('/documentation/api/bearframework.app.request/') ?>">$app->request</a> provides you the necessary data.
+            <a href="<?= $app->urls->get('/documentation/routing/') ?>">Routing</a> can be very helpful. But sometimes you will need the full request data. The object <a href="<?= $app->urls->get('/documentation/api/bearframework.app.request/') ?>">$app->request</a> provides you the necessary data.
         </p>
         <h2>API</h2>
     <component src="apiList" prefix="BearFramework\App\Request"/>

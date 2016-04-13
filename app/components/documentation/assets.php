@@ -33,9 +33,7 @@
     </p>
     <component src="code"><?= "
 // You can use the full data path
-\$app-&gt;assets-&gt;getUrl(\$app->config->dataDir . 'objects/uploads/file1.jpg');
-// or use this shortcut
-\$app-&gt;data-&gt;getUrl('uploads/file1.jpg');
+\$app-&gt;assets-&gt;getUrl(\$app-&gt;data-&gt;getFilename('uploads/file1.jpg'));
 " ?></component>
     <p>
         It's important that the object is marked as public.

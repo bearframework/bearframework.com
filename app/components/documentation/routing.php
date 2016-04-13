@@ -1,7 +1,7 @@
 <html>
     <body>
         <p>
-            The purpose of websites is to respond to requests (home page, subpage, assets) and routing in Bear Framework makes this very easy. When you create your app, you can describe different request handlers for different request types. Here is how you can register a callback function that will be called if there is a match with the request parameters. The response object (<a href="<?= $app->getUrl('/documentation/api/bearframework.app.response/') ?>">BearFramework\App\Response</a>) returned by the callback will be sent to the client.
+            The purpose of websites is to respond to requests (home page, subpage, assets) and routing in Bear Framework makes this very easy. When you create your app, you can describe different request handlers for different request types. Here is how you can register a callback function that will be called if there is a match with the request parameters. The response object (<a href="<?= $app->urls->get('/documentation/api/bearframework.app.response/') ?>">BearFramework\App\Response</a>) returned by the callback will be sent to the client.
         </p>
     <component src="code"><?= "// The specified callback will be executed when request path is '/' and response method is GET
 // The text 'Hi' will be shown on the screen
@@ -9,12 +9,12 @@
     return new App\Response('Hi');
 });" ?></component>
     <p>
-        Routes are checked from top to bottom. If a matching route does not return an object of type <a href="<?= $app->getUrl('/documentation/api/bearframework.app.response/') ?>">BearFramework\App\Response</a>, the following routes will be checked too. If there is no match, the framework will respond with an object of type <a href="<?= $app->getUrl('/documentation/api/bearframework.app.response.notfound/') ?>">BearFramework\App\Response\NotFound</a>.<br><br/>
+        Routes are checked from top to bottom. If a matching route does not return an object of type <a href="<?= $app->urls->get('/documentation/api/bearframework.app.response/') ?>">BearFramework\App\Response</a>, the following routes will be checked too. If there is no match, the framework will respond with an object of type <a href="<?= $app->urls->get('/documentation/api/bearframework.app.response.notfound/') ?>">BearFramework\App\Response\NotFound</a>.<br><br/>
     </p>
     <h2>Patterns</h2>
     <p>
         You can write exact match patterns (as the one in the example above) or use "?" and "*" to match everything. The "?" symbol matches specific path part and "*" matches everything. See the examples below.<br><br/>
-        To get the values in the path matched by "?" or "*" you can use the <a href="<?= $app->getUrl('/documentation/request/') ?>">$app->request</a> object. It provides an indexed array containing all path parts. Here is an example:
+        To get the values in the path matched by "?" or "*" you can use the <a href="<?= $app->urls->get('/documentation/request/') ?>">$app->request</a> object. It provides an indexed array containing all path parts. Here is an example:
     </p>
     <component src="code"><?= "
 \$app-&gt;routes-&gt;add('/products/?/', function() use (\$app) {

@@ -1,47 +1,48 @@
 <?php
 return array (
-  'name' => 'getUrl',
+  'name' => 'getDir',
   'parameters' => 
   array (
     0 => 
     array (
-      'name' => 'path',
-      'value' => '/',
+      'name' => 'name',
+      'value' => NULL,
       'type' => 'string',
-      'isOptional' => true,
+      'isOptional' => false,
     ),
   ),
   'comment' => 
   array (
-    'description' => 'Constructs a url for the path specified',
+    'description' => 'Returns the addon dir',
     'type' => NULL,
     'parameters' => 
     array (
       0 => 
       array (
-        'name' => 'path',
+        'name' => 'name',
         'type' => 'string',
-        'description' => 'The path',
+        'description' => 'The addon name',
       ),
     ),
     'return' => 
     array (
       'type' => 'string',
-      'description' => 'Absolute URL containing the base URL plus the path given',
+      'description' => 'The location of the addon',
     ),
     'exceptions' => 
     array (
-      0 => '\\InvalidArgumentException',
+      0 => '\\Exception',
+      1 => '\\InvalidArgumentException',
     ),
   ),
   'isPrivate' => false,
   'isProtected' => false,
   'isPublic' => true,
-  'isStatic' => false,
+  'isStatic' => true,
   'isAbstract' => false,
   'isFinal' => false,
   'isConstructor' => false,
   'isDestructor' => false,
   'type' => 'method',
-  'class' => 'BearFramework\\App',
+  'class' => 'BearFramework\\Addons',
 );

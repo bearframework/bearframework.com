@@ -53,13 +53,19 @@
         -&gt;add ( string \$class , string \$filename )
         -&gt;load ( string \$class )
     -&gt;container
-        -&gt;add ( string \$name , string|object|callable \$value [, array \$options = [] ] )
+        -&gt;set ( string \$name , string|object|callable \$value ] )
         -&gt;get ( string \$name )
         -&gt;has ( string \$name )
+    -&gt;urls
+        -&gt;get ( string \$path = '/' )
+    -&gt;filesystem
+        -&gt;makeDir ( string \$pathname )
+        -&gt;makeFileDir ( string \$filename )
+    -&gt;images
+        -&gt;getSize ( string \$filename )
+        -&gt;resize ( string \$sourceFilename , string \$destinationFilename [, array \$options = [] ] )
     -&gt;initialize ( void )
-    -&gt;load ( string \$filename )
     -&gt;getContext ( string \$filename )
-    -&gt;getUrl ( [ string \$path = '/' ] )
     -&gt;run ( void )
     -&gt;respond ( \BearFramework\App\Response \$response )
         " ?></component>
@@ -72,7 +78,6 @@
         -&gt;getUrl ( string \$filename [, array \$options = [] ] )
     -&gt;classes
         -&gt;add ( string \$class , string \$filename )
-    -&gt;load ( string \$filename )
         " ?></component>
     <h2>Class definitions</h2>
     <component src="apiList" type="class"/>

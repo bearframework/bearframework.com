@@ -205,7 +205,7 @@ return array (
     ),
     2 => 
     array (
-      'name' => 'getMessage',
+      'name' => '__wakeup',
       'parameters' => 
       array (
       ),
@@ -226,13 +226,13 @@ return array (
       'isPublic' => true,
       'isStatic' => false,
       'isAbstract' => false,
-      'isFinal' => true,
+      'isFinal' => false,
       'isConstructor' => false,
       'isDestructor' => false,
     ),
     3 => 
     array (
-      'name' => 'getCode',
+      'name' => 'getMessage',
       'parameters' => 
       array (
       ),
@@ -259,7 +259,7 @@ return array (
     ),
     4 => 
     array (
-      'name' => 'getFile',
+      'name' => 'getCode',
       'parameters' => 
       array (
       ),
@@ -286,7 +286,7 @@ return array (
     ),
     5 => 
     array (
-      'name' => 'getLine',
+      'name' => 'getFile',
       'parameters' => 
       array (
       ),
@@ -313,7 +313,7 @@ return array (
     ),
     6 => 
     array (
-      'name' => 'getTrace',
+      'name' => 'getLine',
       'parameters' => 
       array (
       ),
@@ -340,7 +340,7 @@ return array (
     ),
     7 => 
     array (
-      'name' => 'getPrevious',
+      'name' => 'getTrace',
       'parameters' => 
       array (
       ),
@@ -367,7 +367,7 @@ return array (
     ),
     8 => 
     array (
-      'name' => 'getTraceAsString',
+      'name' => 'getPrevious',
       'parameters' => 
       array (
       ),
@@ -393,6 +393,33 @@ return array (
       'isDestructor' => false,
     ),
     9 => 
+    array (
+      'name' => 'getTraceAsString',
+      'parameters' => 
+      array (
+      ),
+      'comment' => 
+      array (
+        'description' => '',
+        'type' => NULL,
+        'parameters' => 
+        array (
+        ),
+        'return' => NULL,
+        'exceptions' => 
+        array (
+        ),
+      ),
+      'isPrivate' => false,
+      'isProtected' => false,
+      'isPublic' => true,
+      'isStatic' => false,
+      'isAbstract' => false,
+      'isFinal' => true,
+      'isConstructor' => false,
+      'isDestructor' => false,
+    ),
+    10 => 
     array (
       'name' => '__toString',
       'parameters' => 

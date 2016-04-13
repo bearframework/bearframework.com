@@ -9,11 +9,11 @@ if ($app->config->environment === 'production') {
 }
 
 // Add HTML Server Components addon
-$app->addons->add(__DIR__ . '/../vendor/ivopetkov/html-server-components-bearframework-addon');
+$app->addons->add('ivopetkov/html-server-components-bearframework-addon');
 
 // Add Google Analytics addon
 if ($app->config->environment === 'production') {
-    $app->addons->add(__DIR__ . '/../vendor/ivopetkov/google-analytics-bearframework-addon', [
+    $app->addons->add('ivopetkov/google-analytics-bearframework-addon', [
         'trackingID' => 'UA-65160757-3'
     ]);
 }
@@ -95,11 +95,11 @@ $app->hooks->add('responseCreated', function($response) use ($app, $context) {
     $addTemplate = false;
     if ($response instanceof App\Response\NotFound) {
         $response->setContentType('text/html');
-        $response->content = '<component src="file:' . $context->dir . 'components/systempage.php" text="Page not found" />';
+        $response->content = $app->components->process('<component src="file:' . $context->dir . 'components/systempage.php" text="Page not found" />');
         $addTemplate = true;
     } elseif ($response instanceof App\Response\TemporaryUnavailable) {
         $response->setContentType('text/html');
-        $response->content = '<component src="file:' . $context->dir . 'components/systempage.php" text="Temporary unavailable. Try again in few moments." />';
+        $response->content = $app->components->process('<component src="file:' . $context->dir . 'components/systempage.php" text="Temporary unavailable. Try again in few moments." />');
         $addTemplate = true;
     }
     if ($addTemplate || $response instanceof App\Response\HTML) {

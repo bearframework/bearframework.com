@@ -147,7 +147,7 @@ $data = include $context->dir . 'data/api/' . $component->apiCode . '.php';
                 foreach ($api as $methodCode => $methodData) {
                     if ($methodData['type'] === 'method') {
                         if (strpos($methodData['name'], $data['name'] . '::') === 0) {
-                            echo '<a href="' . $app->getUrl('/documentation/api/' . $methodCode . '/') . '">' . $methodData['name'] . '</a> - ' . $methodData['description'] . '<br/>';
+                            echo '<a href="' . $app->urls->get('/documentation/api/' . $methodCode . '/') . '">' . $methodData['name'] . '</a> - ' . $methodData['description'] . '<br/>';
                             $hasMethods = true;
                         }
                     }

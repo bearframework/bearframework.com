@@ -19,7 +19,7 @@ return array (
     0 => 
     array (
       'name' => 'VERSION',
-      'value' => '0.7.0',
+      'value' => '0.8.0',
       'type' => 'string',
     ),
   ),
@@ -232,96 +232,6 @@ return array (
     ),
     5 => 
     array (
-      'name' => 'load',
-      'parameters' => 
-      array (
-        0 => 
-        array (
-          'name' => 'filename',
-          'value' => NULL,
-          'type' => 'string',
-          'isOptional' => false,
-        ),
-      ),
-      'comment' => 
-      array (
-        'description' => 'Loads a file',
-        'type' => NULL,
-        'parameters' => 
-        array (
-          0 => 
-          array (
-            'name' => 'filename',
-            'type' => 'string',
-            'description' => 'The filename to be loaded',
-          ),
-        ),
-        'return' => 
-        array (
-          'type' => 'boolean',
-          'description' => 'TRUE if file loaded successfully. Otherwise returns FALSE.',
-        ),
-        'exceptions' => 
-        array (
-          0 => '\\InvalidArgumentException',
-        ),
-      ),
-      'isPrivate' => false,
-      'isProtected' => false,
-      'isPublic' => true,
-      'isStatic' => false,
-      'isAbstract' => false,
-      'isFinal' => false,
-      'isConstructor' => false,
-      'isDestructor' => false,
-    ),
-    6 => 
-    array (
-      'name' => 'getUrl',
-      'parameters' => 
-      array (
-        0 => 
-        array (
-          'name' => 'path',
-          'value' => '/',
-          'type' => 'string',
-          'isOptional' => true,
-        ),
-      ),
-      'comment' => 
-      array (
-        'description' => 'Constructs a url for the path specified',
-        'type' => NULL,
-        'parameters' => 
-        array (
-          0 => 
-          array (
-            'name' => 'path',
-            'type' => 'string',
-            'description' => 'The path',
-          ),
-        ),
-        'return' => 
-        array (
-          'type' => 'string',
-          'description' => 'Absolute URL containing the base URL plus the path given',
-        ),
-        'exceptions' => 
-        array (
-          0 => '\\InvalidArgumentException',
-        ),
-      ),
-      'isPrivate' => false,
-      'isProtected' => false,
-      'isPublic' => true,
-      'isStatic' => false,
-      'isAbstract' => false,
-      'isFinal' => false,
-      'isConstructor' => false,
-      'isDestructor' => false,
-    ),
-    7 => 
-    array (
       'name' => 'getContext',
       'parameters' => 
       array (
@@ -366,7 +276,7 @@ return array (
       'isConstructor' => false,
       'isDestructor' => false,
     ),
-    8 => 
+    6 => 
     array (
       'name' => 'run',
       'parameters' => 
@@ -397,7 +307,7 @@ return array (
       'isConstructor' => false,
       'isDestructor' => false,
     ),
-    9 => 
+    7 => 
     array (
       'name' => 'respond',
       'parameters' => 
@@ -442,7 +352,7 @@ return array (
       'isConstructor' => false,
       'isDestructor' => false,
     ),
-    10 => 
+    8 => 
     array (
       'name' => '__clone',
       'parameters' => 
@@ -474,7 +384,7 @@ return array (
       'isConstructor' => false,
       'isDestructor' => false,
     ),
-    11 => 
+    9 => 
     array (
       'name' => '__wakeup',
       'parameters' => 
@@ -506,7 +416,7 @@ return array (
       'isConstructor' => false,
       'isDestructor' => false,
     ),
-    12 => 
+    10 => 
     array (
       'name' => '__get',
       'parameters' => 
@@ -551,7 +461,7 @@ return array (
       'isConstructor' => false,
       'isDestructor' => false,
     ),
-    13 => 
+    11 => 
     array (
       'name' => '__isset',
       'parameters' => 

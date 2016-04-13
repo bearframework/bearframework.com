@@ -11,7 +11,7 @@
         </p>
         <h2>Simple API</h2>
         <p>
-            New functions, new objects, new concepts - all the things we must learn when we start using a new framework. Luckily Bear Framework's API is really simple and well-thought. <a href="<?= $app->getUrl('/documentation/api/') ?>">See for yourself</a>.
+            New functions, new objects, new concepts - all the things we must learn when we start using a new framework. Luckily Bear Framework's API is really simple and well-thought. <a href="<?= $app->urls->get('/documentation/api/') ?>">See for yourself</a>.
         </p>
         <h2>Addons</h2>
         <p>

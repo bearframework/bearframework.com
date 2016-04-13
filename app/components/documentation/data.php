@@ -5,7 +5,7 @@
             One of the great benefits of this library is that it support atomic operations (files locking is used). <br/><br/>
             Additionally, you can set metadata to each object. It's a great way to store size, dates or other file metadata.<br/><br/>
             And of course, the data can be backed up easily. It is just raw files on your hard drive.<br/><br/>
-            You can mark an object as public and get it's public URL by calling <a href="<?= $app->getUrl('/documentation/api/bearframework.app.data.getfilename/') ?>">$app->data->getFilename</a> and passing it to <a href="<?= $app->getUrl('/documentation/api/bearframework.app.assets.geturl/') ?>">$app->assets->getUrl</a>.
+            You can mark an object as public and get it's public URL by calling <a href="<?= $app->urls->get('/documentation/api/bearframework.app.data.getfilename/') ?>">$app->data->getFilename</a> and passing it to <a href="<?= $app->urls->get('/documentation/api/bearframework.app.assets.geturl/') ?>">$app->assets->getUrl</a>.
         </p>
         <h2>API</h2>
         <component src="apiList" prefix="BearFramework\App\Data"/>

@@ -21,7 +21,7 @@ return array (
   array (
     0 => 
     array (
-      'name' => 'addons',
+      'name' => 'data',
       'value' => 
       array (
       ),
@@ -53,7 +53,7 @@ return array (
       array (
         0 => 
         array (
-          'name' => 'pathname',
+          'name' => 'name',
           'value' => NULL,
           'type' => 'string',
           'isOptional' => false,
@@ -76,9 +76,9 @@ return array (
         array (
           0 => 
           array (
-            'name' => 'pathname',
+            'name' => 'name',
             'type' => 'string',
-            'description' => 'The directory where the addon index.php file is located',
+            'description' => 'The name of the addon',
           ),
           1 => 
           array (
@@ -89,13 +89,13 @@ return array (
         ),
         'return' => 
         array (
-          'type' => 'void',
-          'description' => 'No value is returned',
+          'type' => 'boolean',
+          'description' => 'TRUE if successfully loaded. FALSE otherwise.',
         ),
         'exceptions' => 
         array (
           0 => '\\InvalidArgumentException',
-          1 => '\\BearFramework\\App\\InvalidConfigOptionException',
+          1 => '\\Exception',
         ),
       ),
       'isPrivate' => false,

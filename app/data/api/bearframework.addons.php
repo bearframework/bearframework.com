@@ -1,10 +1,10 @@
 <?php
 return array (
-  'name' => 'BearFramework\\App\\Container',
-  'namespace' => 'BearFramework\\App',
+  'name' => 'BearFramework\\Addons',
+  'namespace' => 'BearFramework',
   'comment' => 
   array (
-    'description' => 'Dependency Injection container',
+    'description' => 'Place to register addons that can be enabled for the application',
     'type' => NULL,
     'parameters' => 
     array (
@@ -28,7 +28,7 @@ return array (
       'type' => 'array',
       'comment' => 
       array (
-        'description' => 'Stores added data',
+        'description' => 'Registered addons data',
         'type' => 'array',
         'parameters' => 
         array (
@@ -41,14 +41,14 @@ return array (
       'isPrivate' => true,
       'isProtected' => false,
       'isPublic' => false,
-      'isStatic' => false,
+      'isStatic' => true,
     ),
   ),
   'methods' => 
   array (
     0 => 
     array (
-      'name' => 'set',
+      'name' => 'register',
       'parameters' => 
       array (
         0 => 
@@ -60,15 +60,24 @@ return array (
         ),
         1 => 
         array (
-          'name' => 'value',
+          'name' => 'dir',
           'value' => NULL,
-          'type' => 'string|object|callable',
+          'type' => 'string',
           'isOptional' => false,
+        ),
+        2 => 
+        array (
+          'name' => 'options',
+          'value' => 
+          array (
+          ),
+          'type' => 'array',
+          'isOptional' => true,
         ),
       ),
       'comment' => 
       array (
-        'description' => 'Registeres a value for the specified name',
+        'description' => 'Registers an addon',
         'type' => NULL,
         'parameters' => 
         array (
@@ -76,13 +85,19 @@ return array (
           array (
             'name' => 'name',
             'type' => 'string',
-            'description' => 'The service name.',
+            'description' => 'The addon name',
           ),
           1 => 
           array (
-            'name' => 'value',
-            'type' => 'string|object|callable',
-            'description' => 'The object that will be returned when requested.',
+            'name' => 'dir',
+            'type' => 'string',
+            'description' => 'The addon location',
+          ),
+          2 => 
+          array (
+            'name' => 'options',
+            'type' => 'array',
+            'description' => 'Addon options',
           ),
         ),
         'return' => 
@@ -98,7 +113,7 @@ return array (
       'isPrivate' => false,
       'isProtected' => false,
       'isPublic' => true,
-      'isStatic' => false,
+      'isStatic' => true,
       'isAbstract' => false,
       'isFinal' => false,
       'isConstructor' => false,
@@ -106,7 +121,7 @@ return array (
     ),
     1 => 
     array (
-      'name' => 'get',
+      'name' => 'exists',
       'parameters' => 
       array (
         0 => 
@@ -119,7 +134,7 @@ return array (
       ),
       'comment' => 
       array (
-        'description' => 'Returns a object and returns it',
+        'description' => 'Checks whether addon is registered',
         'type' => NULL,
         'parameters' => 
         array (
@@ -127,24 +142,23 @@ return array (
           array (
             'name' => 'name',
             'type' => 'string',
-            'description' => 'The service name.',
+            'description' => 'The addon name',
           ),
         ),
         'return' => 
         array (
-          'type' => 'object',
-          'description' => 'The object added for the name specified',
+          'type' => 'boolean',
+          'description' => 'TRUE if addon is registered. FALSE otherwise.',
         ),
         'exceptions' => 
         array (
           0 => '\\InvalidArgumentException',
-          1 => '\\Exception',
         ),
       ),
       'isPrivate' => false,
       'isProtected' => false,
       'isPublic' => true,
-      'isStatic' => false,
+      'isStatic' => true,
       'isAbstract' => false,
       'isFinal' => false,
       'isConstructor' => false,
@@ -152,7 +166,7 @@ return array (
     ),
     2 => 
     array (
-      'name' => 'has',
+      'name' => 'getDir',
       'parameters' => 
       array (
         0 => 
@@ -165,7 +179,7 @@ return array (
       ),
       'comment' => 
       array (
-        'description' => 'Returns information about whether the service is added',
+        'description' => 'Returns the addon dir',
         'type' => NULL,
         'parameters' => 
         array (
@@ -173,23 +187,101 @@ return array (
           array (
             'name' => 'name',
             'type' => 'string',
-            'description' => 'The name of the service',
+            'description' => 'The addon name',
           ),
         ),
         'return' => 
         array (
-          'type' => 'boolen',
-          'description' => 'TRUE if services is added. FALSE otherwise.',
+          'type' => 'string',
+          'description' => 'The location of the addon',
         ),
         'exceptions' => 
         array (
-          0 => '\\InvalidArgumentException',
+          0 => '\\Exception',
+          1 => '\\InvalidArgumentException',
         ),
       ),
       'isPrivate' => false,
       'isProtected' => false,
       'isPublic' => true,
-      'isStatic' => false,
+      'isStatic' => true,
+      'isAbstract' => false,
+      'isFinal' => false,
+      'isConstructor' => false,
+      'isDestructor' => false,
+    ),
+    3 => 
+    array (
+      'name' => 'getOptions',
+      'parameters' => 
+      array (
+        0 => 
+        array (
+          'name' => 'name',
+          'value' => NULL,
+          'type' => 'string',
+          'isOptional' => false,
+        ),
+      ),
+      'comment' => 
+      array (
+        'description' => 'Returns the addon options',
+        'type' => NULL,
+        'parameters' => 
+        array (
+          0 => 
+          array (
+            'name' => 'name',
+            'type' => 'string',
+            'description' => 'The addon name',
+          ),
+        ),
+        'return' => 
+        array (
+          'type' => 'string',
+          'description' => 'The location of the addon',
+        ),
+        'exceptions' => 
+        array (
+          0 => '\\Exception',
+          1 => '\\InvalidArgumentException',
+        ),
+      ),
+      'isPrivate' => false,
+      'isProtected' => false,
+      'isPublic' => true,
+      'isStatic' => true,
+      'isAbstract' => false,
+      'isFinal' => false,
+      'isConstructor' => false,
+      'isDestructor' => false,
+    ),
+    4 => 
+    array (
+      'name' => 'getList',
+      'parameters' => 
+      array (
+      ),
+      'comment' => 
+      array (
+        'description' => 'Returns an array containing the names of all registered addons',
+        'type' => NULL,
+        'parameters' => 
+        array (
+        ),
+        'return' => 
+        array (
+          'type' => 'array',
+          'description' => 'The names of all registered addons',
+        ),
+        'exceptions' => 
+        array (
+        ),
+      ),
+      'isPrivate' => false,
+      'isProtected' => false,
+      'isPublic' => true,
+      'isStatic' => true,
       'isAbstract' => false,
       'isFinal' => false,
       'isConstructor' => false,

@@ -7,7 +7,7 @@
         <component src="apiList" prefix="BearFramework\App\Hooks"/>
         <h2>Examples</h2>
         <p>
-            This function changes the response content if the response is of type <a href="<?= $app->getUrl('/documentation/api/bearframework.app.response.notfound/') ?>">Bearframwork\App\Response\NotFound</a>.
+            This function changes the response content if the response is of type <a href="<?= $app->urls->get('/documentation/api/bearframework.app.response.notfound/') ?>">Bearframwork\App\Response\NotFound</a>.
         </p>
     <component src="code"><?= "
 \$app->hooks->add('responseCreated', function(\$response) {

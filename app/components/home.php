@@ -14,7 +14,7 @@
     <body>
         <div class="slogan">A framework born in 2016</div>
         <p>
-            The goal of Bear Framework is to help you start your next web project in less than a minute and help you make it successful. You've got <a href="<?= $app->getUrl('/documentation/routing/') ?>">routing</a>, <a href="<?= $app->getUrl('/documentation/data/') ?>">data storage</a>, <a href="<?= $app->getUrl('/documentation/addons/') ?>">addons</a>, <a href="<?= $app->getUrl('/documentation/logging/') ?>">logging</a>, <a href="<?= $app->getUrl('/documentation/assets/') ?>">assets helpers</a> and <a href="<?= $app->getUrl('/documentation/') ?>">many more useful tools</a>.<br/><br/>
+            The goal of Bear Framework is to help you start your next web project in less than a minute and help you make it successful. You've got <a href="<?= $app->urls->get('/documentation/routing/') ?>">routing</a>, <a href="<?= $app->urls->get('/documentation/data/') ?>">data storage</a>, <a href="<?= $app->urls->get('/documentation/addons/') ?>">addons</a>, <a href="<?= $app->urls->get('/documentation/logging/') ?>">logging</a>, <a href="<?= $app->urls->get('/documentation/assets/') ?>">assets helpers</a> and <a href="<?= $app->urls->get('/documentation/') ?>">many more useful tools</a>.<br/><br/>
             Let's start with "Hi" and see how easy it is to use Bear Framework.
         </p>
 
@@ -35,12 +35,12 @@ use BearFramework\App;
 \$app-&gt;run();
 " ?></component>
     <p>
-        Browse the <a href="<?= $app->getUrl('/documentation/') ?>">documentation</a> for more examples.
+        Browse the <a href="<?= $app->urls->get('/documentation/') ?>">documentation</a> for more examples.
     </p>
     <h2>Learn more</h2>
     <p><?php
         foreach (Data::$articles as $code => $article) {
-            echo '<a href="' . $app->getUrl('/' . $code . '/') . '">' . $article['name'] . '</a> - ' . $article['description'] . '<br/>';
+            echo '<a href="' . $app->urls->get('/' . $code . '/') . '">' . $article['name'] . '</a> - ' . $article['description'] . '<br/>';
         }
         ?></p>
 </body>

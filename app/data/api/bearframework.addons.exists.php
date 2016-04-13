@@ -1,11 +1,11 @@
 <?php
 return array (
-  'name' => 'load',
+  'name' => 'exists',
   'parameters' => 
   array (
     0 => 
     array (
-      'name' => 'filename',
+      'name' => 'name',
       'value' => NULL,
       'type' => 'string',
       'isOptional' => false,
@@ -13,21 +13,21 @@ return array (
   ),
   'comment' => 
   array (
-    'description' => 'Loads a file from the current context dir',
+    'description' => 'Checks whether addon is registered',
     'type' => NULL,
     'parameters' => 
     array (
       0 => 
       array (
-        'name' => 'filename',
+        'name' => 'name',
         'type' => 'string',
-        'description' => 'The filename to be loaded',
+        'description' => 'The addon name',
       ),
     ),
     'return' => 
     array (
       'type' => 'boolean',
-      'description' => NULL,
+      'description' => 'TRUE if addon is registered. FALSE otherwise.',
     ),
     'exceptions' => 
     array (
@@ -37,11 +37,11 @@ return array (
   'isPrivate' => false,
   'isProtected' => false,
   'isPublic' => true,
-  'isStatic' => false,
+  'isStatic' => true,
   'isAbstract' => false,
   'isFinal' => false,
   'isConstructor' => false,
   'isDestructor' => false,
   'type' => 'method',
-  'class' => 'BearFramework\\App\\AppContext',
+  'class' => 'BearFramework\\Addons',
 );

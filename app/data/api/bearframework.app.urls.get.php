@@ -1,33 +1,33 @@
 <?php
 return array (
-  'name' => 'load',
+  'name' => 'get',
   'parameters' => 
   array (
     0 => 
     array (
-      'name' => 'filename',
-      'value' => NULL,
+      'name' => 'path',
+      'value' => '/',
       'type' => 'string',
-      'isOptional' => false,
+      'isOptional' => true,
     ),
   ),
   'comment' => 
   array (
-    'description' => 'Loads a file',
+    'description' => 'Constructs a url for the path specified',
     'type' => NULL,
     'parameters' => 
     array (
       0 => 
       array (
-        'name' => 'filename',
+        'name' => 'path',
         'type' => 'string',
-        'description' => 'The filename to be loaded',
+        'description' => 'The path',
       ),
     ),
     'return' => 
     array (
-      'type' => 'boolean',
-      'description' => 'TRUE if file loaded successfully. Otherwise returns FALSE.',
+      'type' => 'string',
+      'description' => 'Absolute URL containing the base URL plus the path given',
     ),
     'exceptions' => 
     array (
@@ -43,5 +43,5 @@ return array (
   'isConstructor' => false,
   'isDestructor' => false,
   'type' => 'method',
-  'class' => 'BearFramework\\App',
+  'class' => 'BearFramework\\App\\Urls',
 );

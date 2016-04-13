@@ -1,11 +1,11 @@
 <?php
 return array (
-  'name' => 'getSize',
+  'name' => 'makeDir',
   'parameters' => 
   array (
     0 => 
     array (
-      'name' => 'sourceFilename',
+      'name' => 'pathname',
       'value' => NULL,
       'type' => 'string',
       'isOptional' => false,
@@ -13,35 +13,35 @@ return array (
   ),
   'comment' => 
   array (
-    'description' => 'Returns the size of the image specified',
+    'description' => 'Creates a dir if it\'s missing',
     'type' => NULL,
     'parameters' => 
     array (
       0 => 
       array (
-        'name' => 'sourceFilename',
+        'name' => 'pathname',
         'type' => 'string',
-        'description' => 'The filename of the image',
+        'description' => 'The pathname of the dir',
       ),
     ),
     'return' => 
     array (
-      'type' => 'array[int,',
-      'description' => 'int] The size of the image specified',
+      'type' => 'void',
+      'description' => 'No value is returned',
     ),
     'exceptions' => 
     array (
-      0 => '\\InvalidArgumentException',
+      0 => '\\Exception',
     ),
   ),
   'isPrivate' => false,
   'isProtected' => false,
   'isPublic' => true,
-  'isStatic' => true,
+  'isStatic' => false,
   'isAbstract' => false,
   'isFinal' => false,
   'isConstructor' => false,
   'isDestructor' => false,
   'type' => 'method',
-  'class' => 'BearFramework\\App\\Utilities\\Graphics',
+  'class' => 'BearFramework\\App\\Filesystem',
 );

@@ -1,6 +1,6 @@
 <?php
 return array (
-  'name' => 'add',
+  'name' => 'set',
   'parameters' => 
   array (
     0 => 
@@ -16,15 +16,6 @@ return array (
       'value' => NULL,
       'type' => 'string|object|callable',
       'isOptional' => false,
-    ),
-    2 => 
-    array (
-      'name' => 'options',
-      'value' => 
-      array (
-      ),
-      'type' => 'array',
-      'isOptional' => true,
     ),
   ),
   'comment' => 
@@ -44,12 +35,6 @@ return array (
         'name' => 'value',
         'type' => 'string|object|callable',
         'description' => 'The object that will be returned when requested.',
-      ),
-      2 => 
-      array (
-        'name' => 'options',
-        'type' => 'array',
-        'description' => 'Array options. Currently there is only one - singleton',
       ),
     ),
     'return' => 

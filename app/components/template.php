@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,minimal-ui"/>
         <meta name="keywords" content=""/>
         <meta name="description" content=""/>
-        <meta property="og:image" content="<?= $app->getUrl('/assets/socialimage'); ?>"/>
+        <meta property="og:image" content="<?= $app->urls->get('/assets/socialimage'); ?>"/>
         <meta property="og:type" content="website"/>
         <meta property="fb:page_id" content="826626514113679"/>
         <meta name="twitter:card" content="summary_large_image"/>
@@ -15,23 +15,23 @@
         <meta name="twitter:creator" content="@bearframework"/>
         <meta name="twitter:title" content="Bear Framework"/>
         <meta name="twitter:description" content=""/>
-        <meta name="twitter:image" content="<?= $app->getUrl('/assets/socialimage'); ?>">
+        <meta name="twitter:image" content="<?= $app->urls->get('/assets/socialimage'); ?>">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-        <link rel="apple-touch-icon" sizes="57x57" href="<?= $app->getUrl('/assets/icon57'); ?>">
-        <link rel="apple-touch-icon" sizes="60x60" href="<?= $app->getUrl('/assets/icon60'); ?>">
-        <link rel="apple-touch-icon" sizes="72x72" href="<?= $app->getUrl('/assets/icon72'); ?>">
-        <link rel="apple-touch-icon" sizes="76x76" href="<?= $app->getUrl('/assets/icon76'); ?>">
-        <link rel="apple-touch-icon" sizes="114x114" href="<?= $app->getUrl('/assets/icon114'); ?>">
-        <link rel="apple-touch-icon" sizes="120x120" href="<?= $app->getUrl('/assets/icon120'); ?>">
-        <link rel="apple-touch-icon" sizes="144x144" href="<?= $app->getUrl('/assets/icon144'); ?>">
-        <link rel="apple-touch-icon" sizes="152x152" href="<?= $app->getUrl('/assets/icon152'); ?>">
-        <link rel="apple-touch-icon" sizes="180x180" href="<?= $app->getUrl('/assets/icon180'); ?>">
-        <link rel="icon" type="image/png" href="<?= $app->getUrl('/assets/icon32'); ?>" sizes="32x32">
-        <link rel="icon" type="image/png" href="<?= $app->getUrl('/assets/icon192'); ?>" sizes="192x192">
-        <link rel="icon" type="image/png" href="<?= $app->getUrl('/assets/icon96'); ?>" sizes="96x96">
-        <link rel="icon" type="image/png" href="<?= $app->getUrl('/assets/icon16'); ?>" sizes="16x16">
+        <link rel="apple-touch-icon" sizes="57x57" href="<?= $app->urls->get('/assets/icon57'); ?>">
+        <link rel="apple-touch-icon" sizes="60x60" href="<?= $app->urls->get('/assets/icon60'); ?>">
+        <link rel="apple-touch-icon" sizes="72x72" href="<?= $app->urls->get('/assets/icon72'); ?>">
+        <link rel="apple-touch-icon" sizes="76x76" href="<?= $app->urls->get('/assets/icon76'); ?>">
+        <link rel="apple-touch-icon" sizes="114x114" href="<?= $app->urls->get('/assets/icon114'); ?>">
+        <link rel="apple-touch-icon" sizes="120x120" href="<?= $app->urls->get('/assets/icon120'); ?>">
+        <link rel="apple-touch-icon" sizes="144x144" href="<?= $app->urls->get('/assets/icon144'); ?>">
+        <link rel="apple-touch-icon" sizes="152x152" href="<?= $app->urls->get('/assets/icon152'); ?>">
+        <link rel="apple-touch-icon" sizes="180x180" href="<?= $app->urls->get('/assets/icon180'); ?>">
+        <link rel="icon" type="image/png" href="<?= $app->urls->get('/assets/icon32'); ?>" sizes="32x32">
+        <link rel="icon" type="image/png" href="<?= $app->urls->get('/assets/icon192'); ?>" sizes="192x192">
+        <link rel="icon" type="image/png" href="<?= $app->urls->get('/assets/icon96'); ?>" sizes="96x96">
+        <link rel="icon" type="image/png" href="<?= $app->urls->get('/assets/icon16'); ?>" sizes="16x16">
         <meta name="msapplication-TileColor" content="#26ade4">
-        <meta name="msapplication-TileImage" content="<?= $app->getUrl('/assets/icon144'); ?>">
+        <meta name="msapplication-TileImage" content="<?= $app->urls->get('/assets/icon144'); ?>">
         <meta name="theme-color" content="#ffffff">
         <style>
             *{
@@ -157,9 +157,9 @@
     <body>
         <header>
             <nav>
-                <a href="<?= $app->getUrl('/') ?>">Home</a>
-                <a href="<?= $app->getUrl('/documentation/') ?>">Documentation</a>
-                <a href="<?= $app->getUrl('/documentation/download/') ?>">Download</a>
+                <a href="<?= $app->urls->get('/') ?>">Home</a>
+                <a href="<?= $app->urls->get('/documentation/') ?>">Documentation</a>
+                <a href="<?= $app->urls->get('/documentation/download/') ?>">Download</a>
                 <a href="https://github.com/bearframework/bearframework">GitHub</a>
             </nav>
             <span class="header-logo"></span>

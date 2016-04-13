@@ -19,23 +19,11 @@ return array (
     ),
     2 => 
     array (
-      'name' => 'width',
-      'value' => NULL,
-      'type' => 'int',
-      'isOptional' => false,
-    ),
-    3 => 
-    array (
-      'name' => 'height',
-      'value' => NULL,
-      'type' => 'int',
-      'isOptional' => false,
-    ),
-    4 => 
-    array (
-      'name' => 'outputType',
-      'value' => NULL,
-      'type' => 'string',
+      'name' => 'options',
+      'value' => 
+      array (
+      ),
+      'type' => 'array',
       'isOptional' => true,
     ),
   ),
@@ -59,21 +47,9 @@ return array (
       ),
       2 => 
       array (
-        'name' => 'width',
-        'type' => 'int',
-        'description' => 'The width of the resized image',
-      ),
-      3 => 
-      array (
-        'name' => 'height',
-        'type' => 'int',
-        'description' => 'The height of the resized image',
-      ),
-      4 => 
-      array (
-        'name' => 'outputType',
-        'type' => 'string',
-        'description' => 'The output type of the resized image',
+        'name' => 'options',
+        'type' => 'array',
+        'description' => 'Resize options. You can resize the file by providing "width", "height" or both.',
       ),
     ),
     'return' => 
@@ -90,11 +66,11 @@ return array (
   'isPrivate' => false,
   'isProtected' => false,
   'isPublic' => true,
-  'isStatic' => true,
+  'isStatic' => false,
   'isAbstract' => false,
   'isFinal' => false,
   'isConstructor' => false,
   'isDestructor' => false,
   'type' => 'method',
-  'class' => 'BearFramework\\App\\Utilities\\Graphics',
+  'class' => 'BearFramework\\App\\Images',
 );
