@@ -19,7 +19,7 @@ require 'vendor/autoload.php';" ?></component>
     </p>
     <component src="code">require '/path/to/bearframework/autoload.php';</component>
     <p>
-        You can also <a href="https://github.com/bearframework/bearframework/releases">download</a> a sample app and begin building your app right away.
+        You can also <a href="https://github.com/bearframework/app/releases">download</a> a sample app and begin building your app right away.
     </p>
 </body>
 </html>

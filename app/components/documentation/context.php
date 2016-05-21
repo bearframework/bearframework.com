@@ -8,12 +8,6 @@
         <h2>API (for addons)</h2>
         <component src="apiList" prefix="BearFramework\App\AddonContext"/>
         <h2>Examples</h2>
-        <p>
-            Loads a file from the current application/addon dir.
-        </p>
-    <component src="code"><?= "
-\$context-&gt;load('classes/MyClass.php');
-" ?></component>
     <p>
         Registers a class for autoloading.
     </p>

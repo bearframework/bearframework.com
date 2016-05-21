@@ -2,7 +2,7 @@
     <body>
         <p>
             HTML is just not enough to render a modern website. JavaScript, CSS, images and videos play a big role in the client experience. Bear Framework enables you to handle such assets with ease.<br/><br/>
-            The $app->assets object enables to get a public URL for a specific asset. You can even resize images on the fly. The only requirement is that files must be located in a directory called '/assets/' or made public if they are in the data storage.
+            The $app->assets object enables to get a public URL for a specific asset. You can even resize images on the fly. The only requirement is that files must be in a registered directory (see below) or made public if they are in the data storage.
         </p>
         <h2>API</h2>
     <component src="apiList" prefix="BearFramework\App\Assets"/>
